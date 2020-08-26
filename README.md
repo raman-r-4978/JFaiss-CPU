@@ -29,6 +29,8 @@ Now copy the src files from docker to host
 docker cp <containerId>:/opt/jfaiss/cpu .
 ```
 
+*(Note: Current repo has all the files generated upto Step 2, hence user doesn't need to generate files again)*
+
 ### Step 3
 1. Run test cases
 ```
