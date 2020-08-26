@@ -34,7 +34,7 @@ docker cp <containerId>:/opt/jfaiss/cpu .
 ### Step 3
 1. Run test cases
 ```
-mvn test
+mvn clean test
 ```
 2. Package as JAR
 ```
