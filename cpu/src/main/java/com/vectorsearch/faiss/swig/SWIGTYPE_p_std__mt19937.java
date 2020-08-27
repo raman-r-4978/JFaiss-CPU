@@ -23,4 +23,3 @@ public class SWIGTYPE_p_std__mt19937 {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }
-

@@ -23,4 +23,3 @@ public class SWIGTYPE_p_omp_lock_t {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }
-

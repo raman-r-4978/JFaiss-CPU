@@ -67,5 +67,4 @@ public class FloatVectorVector {
   public void swap(FloatVectorVector other) {
     swigfaissJNI.FloatVectorVector_swap(swigCPtr, this, FloatVectorVector.getCPtr(other), other);
   }
-
 }

@@ -46,5 +46,4 @@ public class IndexHNSWPQ extends IndexHNSW {
   public void train(int n, SWIGTYPE_p_float x) {
     swigfaissJNI.IndexHNSWPQ_train(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
   }
-
 }

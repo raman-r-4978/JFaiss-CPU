@@ -38,5 +38,4 @@ public class IDSelector {
   public boolean is_member(int id) {
     return swigfaissJNI.IDSelector_is_member(swigCPtr, this, id);
   }
-
 }

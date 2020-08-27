@@ -47,5 +47,4 @@ public class VectorIOWriter extends IOWriter {
   public VectorIOWriter() {
     this(swigfaissJNI.new_VectorIOWriter(), true);
   }
-
 }

@@ -54,5 +54,4 @@ public class InterruptCallback {
   public static long get_period_hint(long flops) {
     return swigfaissJNI.InterruptCallback_get_period_hint(flops);
   }
-
 }

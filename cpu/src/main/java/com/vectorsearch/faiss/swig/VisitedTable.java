@@ -67,5 +67,4 @@ public class VisitedTable {
   public void advance() {
     swigfaissJNI.VisitedTable_advance(swigCPtr, this);
   }
-
 }

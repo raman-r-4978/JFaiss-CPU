@@ -67,5 +67,4 @@ public class DoubleVector {
   public void swap(DoubleVector other) {
     swigfaissJNI.DoubleVector_swap(swigCPtr, this, DoubleVector.getCPtr(other), other);
   }
-
 }

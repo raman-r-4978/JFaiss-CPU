@@ -118,5 +118,4 @@ public class ClusteringParameters {
   public ClusteringParameters() {
     this(swigfaissJNI.new_ClusteringParameters(), true);
   }
-
 }

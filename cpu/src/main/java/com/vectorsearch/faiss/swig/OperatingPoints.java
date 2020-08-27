@@ -36,7 +36,8 @@ public class OperatingPoints {
   }
 
   public void setAll_pts(OperatingPointVector value) {
-    swigfaissJNI.OperatingPoints_all_pts_set(swigCPtr, this, OperatingPointVector.getCPtr(value), value);
+    swigfaissJNI.OperatingPoints_all_pts_set(
+        swigCPtr, this, OperatingPointVector.getCPtr(value), value);
   }
 
   public OperatingPointVector getAll_pts() {
@@ -45,7 +46,8 @@ public class OperatingPoints {
   }
 
   public void setOptimal_pts(OperatingPointVector value) {
-    swigfaissJNI.OperatingPoints_optimal_pts_set(swigCPtr, this, OperatingPointVector.getCPtr(value), value);
+    swigfaissJNI.OperatingPoints_optimal_pts_set(
+        swigCPtr, this, OperatingPointVector.getCPtr(value), value);
   }
 
   public OperatingPointVector getOptimal_pts() {
@@ -58,11 +60,13 @@ public class OperatingPoints {
   }
 
   public int merge_with(OperatingPoints other, String prefix) {
-    return swigfaissJNI.OperatingPoints_merge_with__SWIG_0(swigCPtr, this, OperatingPoints.getCPtr(other), other, prefix);
+    return swigfaissJNI.OperatingPoints_merge_with__SWIG_0(
+        swigCPtr, this, OperatingPoints.getCPtr(other), other, prefix);
   }
 
   public int merge_with(OperatingPoints other) {
-    return swigfaissJNI.OperatingPoints_merge_with__SWIG_1(swigCPtr, this, OperatingPoints.getCPtr(other), other);
+    return swigfaissJNI.OperatingPoints_merge_with__SWIG_1(
+        swigCPtr, this, OperatingPoints.getCPtr(other), other);
   }
 
   public void clear() {
@@ -96,5 +100,4 @@ public class OperatingPoints {
   public void optimal_to_gnuplot(String fname) {
     swigfaissJNI.OperatingPoints_optimal_to_gnuplot(swigCPtr, this, fname);
   }
-
 }

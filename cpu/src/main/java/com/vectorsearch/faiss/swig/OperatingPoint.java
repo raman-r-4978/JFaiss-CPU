@@ -70,5 +70,4 @@ public class OperatingPoint {
   public OperatingPoint() {
     this(swigfaissJNI.new_OperatingPoint(), true);
   }
-
 }

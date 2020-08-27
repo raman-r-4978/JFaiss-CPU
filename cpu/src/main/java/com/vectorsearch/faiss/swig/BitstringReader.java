@@ -67,5 +67,4 @@ public class BitstringReader {
   public long read(int nbit) {
     return swigfaissJNI.BitstringReader_read(swigCPtr, this, nbit);
   }
-
 }

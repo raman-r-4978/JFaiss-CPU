@@ -55,5 +55,4 @@ public class ParameterRange {
   public ParameterRange() {
     this(swigfaissJNI.new_ParameterRange(), true);
   }
-
 }

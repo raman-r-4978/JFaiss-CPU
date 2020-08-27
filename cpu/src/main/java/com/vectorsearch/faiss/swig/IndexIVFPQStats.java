@@ -74,5 +74,4 @@ public class IndexIVFPQStats {
   public void reset() {
     swigfaissJNI.IndexIVFPQStats_reset(swigCPtr, this);
   }
-
 }

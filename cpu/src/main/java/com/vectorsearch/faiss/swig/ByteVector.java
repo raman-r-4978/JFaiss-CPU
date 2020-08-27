@@ -67,5 +67,4 @@ public class ByteVector {
   public void swap(ByteVector other) {
     swigfaissJNI.ByteVector_swap(swigCPtr, this, ByteVector.getCPtr(other), other);
   }
-
 }

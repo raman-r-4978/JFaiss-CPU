@@ -75,5 +75,4 @@ public class Repeats {
   public void decode(long code, SWIGTYPE_p_float c) {
     swigfaissJNI.Repeats_decode(swigCPtr, this, code, SWIGTYPE_p_float.getCPtr(c));
   }
-
 }

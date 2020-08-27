@@ -125,5 +125,4 @@ public class PCAMatrix extends LinearTransform {
   public void prepare_Ab() {
     swigfaissJNI.PCAMatrix_prepare_Ab(swigCPtr, this);
   }
-
 }

@@ -56,5 +56,4 @@ public class intArray {
     long cPtr = swigfaissJNI.intArray_frompointer(SWIGTYPE_p_int.getCPtr(t));
     return (cPtr == 0) ? null : new intArray(cPtr, false);
   }
-
 }

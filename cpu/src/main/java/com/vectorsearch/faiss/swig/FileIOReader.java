@@ -63,5 +63,4 @@ public class FileIOReader extends IOReader {
   public int fileno() {
     return swigfaissJNI.FileIOReader_fileno(swigCPtr, this);
   }
-
 }

@@ -11,7 +11,8 @@ package com.vectorsearch.faiss.swig;
 public class SWIGTYPE_p_std__vectorT_faiss__InvertedLists_const_p_t {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_std__vectorT_faiss__InvertedLists_const_p_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_std__vectorT_faiss__InvertedLists_const_p_t(
+      long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
@@ -23,4 +24,3 @@ public class SWIGTYPE_p_std__vectorT_faiss__InvertedLists_const_p_t {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }
-

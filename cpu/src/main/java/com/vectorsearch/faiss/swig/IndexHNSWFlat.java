@@ -42,5 +42,4 @@ public class IndexHNSWFlat extends IndexHNSW {
   public IndexHNSWFlat(int d, int M) {
     this(swigfaissJNI.new_IndexHNSWFlat__SWIG_1(d, M), true);
   }
-
 }

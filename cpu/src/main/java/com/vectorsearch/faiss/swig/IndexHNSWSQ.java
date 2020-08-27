@@ -42,5 +42,4 @@ public class IndexHNSWSQ extends IndexHNSW {
   public IndexHNSWSQ(int d, ScalarQuantizer.QuantizerType qtype, int M) {
     this(swigfaissJNI.new_IndexHNSWSQ__SWIG_1(d, qtype.swigValue(), M), true);
   }
-
 }

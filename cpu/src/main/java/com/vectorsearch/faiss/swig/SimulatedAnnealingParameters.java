@@ -102,5 +102,4 @@ public class SimulatedAnnealingParameters {
   public SimulatedAnnealingParameters() {
     this(swigfaissJNI.new_SimulatedAnnealingParameters(), true);
   }
-
 }

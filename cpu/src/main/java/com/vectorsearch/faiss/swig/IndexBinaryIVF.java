@@ -137,7 +137,10 @@ public class IndexBinaryIVF extends IndexBinary {
   }
 
   public IndexBinaryIVF(IndexBinary quantizer, long d, long nlist) {
-    this(swigfaissJNI.new_IndexBinaryIVF__SWIG_0(IndexBinary.getCPtr(quantizer), quantizer, d, nlist), true);
+    this(
+        swigfaissJNI.new_IndexBinaryIVF__SWIG_0(
+            IndexBinary.getCPtr(quantizer), quantizer, d, nlist),
+        true);
   }
 
   public IndexBinaryIVF() {
@@ -157,23 +160,71 @@ public class IndexBinaryIVF extends IndexBinary {
   }
 
   public void add_with_ids(int n, SWIGTYPE_p_unsigned_char x, SWIGTYPE_p_long xids) {
-    swigfaissJNI.IndexBinaryIVF_add_with_ids(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
+    swigfaissJNI.IndexBinaryIVF_add_with_ids(
+        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
   }
 
-  public void add_core(int n, SWIGTYPE_p_unsigned_char x, SWIGTYPE_p_long xids, SWIGTYPE_p_long precomputed_idx) {
-    swigfaissJNI.IndexBinaryIVF_add_core(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids), SWIGTYPE_p_long.getCPtr(precomputed_idx));
+  public void add_core(
+      int n, SWIGTYPE_p_unsigned_char x, SWIGTYPE_p_long xids, SWIGTYPE_p_long precomputed_idx) {
+    swigfaissJNI.IndexBinaryIVF_add_core(
+        swigCPtr,
+        this,
+        n,
+        SWIGTYPE_p_unsigned_char.getCPtr(x),
+        SWIGTYPE_p_long.getCPtr(xids),
+        SWIGTYPE_p_long.getCPtr(precomputed_idx));
   }
 
-  public void search_preassigned(int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_long assign, SWIGTYPE_p_int centroid_dis, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels, boolean store_pairs, IVFSearchParameters params) {
-    swigfaissJNI.IndexBinaryIVF_search_preassigned__SWIG_0(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), k, SWIGTYPE_p_long.getCPtr(assign), SWIGTYPE_p_int.getCPtr(centroid_dis), SWIGTYPE_p_int.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels), store_pairs, IVFSearchParameters.getCPtr(params), params);
+  public void search_preassigned(
+      int n,
+      SWIGTYPE_p_unsigned_char x,
+      int k,
+      SWIGTYPE_p_long assign,
+      SWIGTYPE_p_int centroid_dis,
+      SWIGTYPE_p_int distances,
+      SWIGTYPE_p_long labels,
+      boolean store_pairs,
+      IVFSearchParameters params) {
+    swigfaissJNI.IndexBinaryIVF_search_preassigned__SWIG_0(
+        swigCPtr,
+        this,
+        n,
+        SWIGTYPE_p_unsigned_char.getCPtr(x),
+        k,
+        SWIGTYPE_p_long.getCPtr(assign),
+        SWIGTYPE_p_int.getCPtr(centroid_dis),
+        SWIGTYPE_p_int.getCPtr(distances),
+        SWIGTYPE_p_long.getCPtr(labels),
+        store_pairs,
+        IVFSearchParameters.getCPtr(params),
+        params);
   }
 
-  public void search_preassigned(int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_long assign, SWIGTYPE_p_int centroid_dis, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels, boolean store_pairs) {
-    swigfaissJNI.IndexBinaryIVF_search_preassigned__SWIG_1(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), k, SWIGTYPE_p_long.getCPtr(assign), SWIGTYPE_p_int.getCPtr(centroid_dis), SWIGTYPE_p_int.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels), store_pairs);
+  public void search_preassigned(
+      int n,
+      SWIGTYPE_p_unsigned_char x,
+      int k,
+      SWIGTYPE_p_long assign,
+      SWIGTYPE_p_int centroid_dis,
+      SWIGTYPE_p_int distances,
+      SWIGTYPE_p_long labels,
+      boolean store_pairs) {
+    swigfaissJNI.IndexBinaryIVF_search_preassigned__SWIG_1(
+        swigCPtr,
+        this,
+        n,
+        SWIGTYPE_p_unsigned_char.getCPtr(x),
+        k,
+        SWIGTYPE_p_long.getCPtr(assign),
+        SWIGTYPE_p_int.getCPtr(centroid_dis),
+        SWIGTYPE_p_int.getCPtr(distances),
+        SWIGTYPE_p_long.getCPtr(labels),
+        store_pairs);
   }
 
   public SWIGTYPE_p_faiss__BinaryInvertedListScanner get_InvertedListScanner(boolean store_pairs) {
-    long cPtr = swigfaissJNI.IndexBinaryIVF_get_InvertedListScanner__SWIG_0(swigCPtr, this, store_pairs);
+    long cPtr =
+        swigfaissJNI.IndexBinaryIVF_get_InvertedListScanner__SWIG_0(swigCPtr, this, store_pairs);
     return (cPtr == 0) ? null : new SWIGTYPE_p_faiss__BinaryInvertedListScanner(cPtr, false);
   }
 
@@ -182,24 +233,49 @@ public class IndexBinaryIVF extends IndexBinary {
     return (cPtr == 0) ? null : new SWIGTYPE_p_faiss__BinaryInvertedListScanner(cPtr, false);
   }
 
-  public void search(int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexBinaryIVF_search(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), k, SWIGTYPE_p_int.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
+  public void search(
+      int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexBinaryIVF_search(
+        swigCPtr,
+        this,
+        n,
+        SWIGTYPE_p_unsigned_char.getCPtr(x),
+        k,
+        SWIGTYPE_p_int.getCPtr(distances),
+        SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void reconstruct(int key, SWIGTYPE_p_unsigned_char recons) {
-    swigfaissJNI.IndexBinaryIVF_reconstruct(swigCPtr, this, key, SWIGTYPE_p_unsigned_char.getCPtr(recons));
+    swigfaissJNI.IndexBinaryIVF_reconstruct(
+        swigCPtr, this, key, SWIGTYPE_p_unsigned_char.getCPtr(recons));
   }
 
   public void reconstruct_n(int i0, int ni, SWIGTYPE_p_unsigned_char recons) {
-    swigfaissJNI.IndexBinaryIVF_reconstruct_n(swigCPtr, this, i0, ni, SWIGTYPE_p_unsigned_char.getCPtr(recons));
+    swigfaissJNI.IndexBinaryIVF_reconstruct_n(
+        swigCPtr, this, i0, ni, SWIGTYPE_p_unsigned_char.getCPtr(recons));
   }
 
-  public void search_and_reconstruct(int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels, SWIGTYPE_p_unsigned_char recons) {
-    swigfaissJNI.IndexBinaryIVF_search_and_reconstruct(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), k, SWIGTYPE_p_int.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels), SWIGTYPE_p_unsigned_char.getCPtr(recons));
+  public void search_and_reconstruct(
+      int n,
+      SWIGTYPE_p_unsigned_char x,
+      int k,
+      SWIGTYPE_p_int distances,
+      SWIGTYPE_p_long labels,
+      SWIGTYPE_p_unsigned_char recons) {
+    swigfaissJNI.IndexBinaryIVF_search_and_reconstruct(
+        swigCPtr,
+        this,
+        n,
+        SWIGTYPE_p_unsigned_char.getCPtr(x),
+        k,
+        SWIGTYPE_p_int.getCPtr(distances),
+        SWIGTYPE_p_long.getCPtr(labels),
+        SWIGTYPE_p_unsigned_char.getCPtr(recons));
   }
 
   public void reconstruct_from_offset(int list_no, int offset, SWIGTYPE_p_unsigned_char recons) {
-    swigfaissJNI.IndexBinaryIVF_reconstruct_from_offset(swigCPtr, this, list_no, offset, SWIGTYPE_p_unsigned_char.getCPtr(recons));
+    swigfaissJNI.IndexBinaryIVF_reconstruct_from_offset(
+        swigCPtr, this, list_no, offset, SWIGTYPE_p_unsigned_char.getCPtr(recons));
   }
 
   public long remove_ids(IDSelector sel) {
@@ -207,7 +283,8 @@ public class IndexBinaryIVF extends IndexBinary {
   }
 
   public void merge_from(IndexBinaryIVF other, int add_id) {
-    swigfaissJNI.IndexBinaryIVF_merge_from(swigCPtr, this, IndexBinaryIVF.getCPtr(other), other, add_id);
+    swigfaissJNI.IndexBinaryIVF_merge_from(
+        swigCPtr, this, IndexBinaryIVF.getCPtr(other), other, add_id);
   }
 
   public long get_list_size(long list_no) {
@@ -223,11 +300,12 @@ public class IndexBinaryIVF extends IndexBinary {
   }
 
   public void replace_invlists(InvertedLists il, boolean own) {
-    swigfaissJNI.IndexBinaryIVF_replace_invlists__SWIG_0(swigCPtr, this, InvertedLists.getCPtr(il), il, own);
+    swigfaissJNI.IndexBinaryIVF_replace_invlists__SWIG_0(
+        swigCPtr, this, InvertedLists.getCPtr(il), il, own);
   }
 
   public void replace_invlists(InvertedLists il) {
-    swigfaissJNI.IndexBinaryIVF_replace_invlists__SWIG_1(swigCPtr, this, InvertedLists.getCPtr(il), il);
+    swigfaissJNI.IndexBinaryIVF_replace_invlists__SWIG_1(
+        swigCPtr, this, InvertedLists.getCPtr(il), il);
   }
-
 }

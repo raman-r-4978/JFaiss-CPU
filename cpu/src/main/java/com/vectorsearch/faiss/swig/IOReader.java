@@ -46,5 +46,4 @@ public class IOReader {
   public int fileno() {
     return swigfaissJNI.IOReader_fileno(swigCPtr, this);
   }
-
 }

@@ -46,5 +46,4 @@ public class IOWriter {
   public int fileno() {
     return swigfaissJNI.IOWriter_fileno(swigCPtr, this);
   }
-
 }

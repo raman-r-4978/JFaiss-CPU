@@ -50,5 +50,4 @@ public class RandomRotationMatrix extends LinearTransform {
   public RandomRotationMatrix() {
     this(swigfaissJNI.new_RandomRotationMatrix__SWIG_1(), true);
   }
-
 }

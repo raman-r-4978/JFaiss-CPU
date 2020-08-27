@@ -54,5 +54,4 @@ public class IVFSearchParameters {
   public IVFSearchParameters() {
     this(swigfaissJNI.new_IVFSearchParameters(), true);
   }
-
 }

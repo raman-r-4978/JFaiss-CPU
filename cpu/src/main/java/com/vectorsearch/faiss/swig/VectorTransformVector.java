@@ -40,7 +40,8 @@ public class VectorTransformVector {
   }
 
   public void push_back(VectorTransform arg0) {
-    swigfaissJNI.VectorTransformVector_push_back(swigCPtr, this, VectorTransform.getCPtr(arg0), arg0);
+    swigfaissJNI.VectorTransformVector_push_back(
+        swigCPtr, this, VectorTransform.getCPtr(arg0), arg0);
   }
 
   public void clear() {
@@ -66,7 +67,7 @@ public class VectorTransformVector {
   }
 
   public void swap(VectorTransformVector other) {
-    swigfaissJNI.VectorTransformVector_swap(swigCPtr, this, VectorTransformVector.getCPtr(other), other);
+    swigfaissJNI.VectorTransformVector_swap(
+        swigCPtr, this, VectorTransformVector.getCPtr(other), other);
   }
-
 }

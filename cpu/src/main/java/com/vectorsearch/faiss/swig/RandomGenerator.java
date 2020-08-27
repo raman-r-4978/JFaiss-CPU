@@ -70,5 +70,4 @@ public class RandomGenerator {
   public RandomGenerator() {
     this(swigfaissJNI.new_RandomGenerator__SWIG_1(), true);
   }
-
 }

@@ -66,5 +66,4 @@ public class CharVector {
   public void swap(CharVector other) {
     swigfaissJNI.CharVector_swap(swigCPtr, this, CharVector.getCPtr(other), other);
   }
-
 }

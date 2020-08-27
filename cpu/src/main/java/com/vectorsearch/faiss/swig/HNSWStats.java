@@ -90,5 +90,4 @@ public class HNSWStats {
   public void reset() {
     swigfaissJNI.HNSWStats_reset(swigCPtr, this);
   }
-
 }

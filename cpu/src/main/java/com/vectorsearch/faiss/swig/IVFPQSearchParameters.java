@@ -54,5 +54,4 @@ public class IVFPQSearchParameters extends IVFSearchParameters {
   public IVFPQSearchParameters() {
     this(swigfaissJNI.new_IVFPQSearchParameters(), true);
   }
-
 }

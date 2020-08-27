@@ -78,11 +78,11 @@ public class Clustering extends ClusteringParameters {
   }
 
   public void train(int n, SWIGTYPE_p_float x, Index index) {
-    swigfaissJNI.Clustering_train(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), Index.getCPtr(index), index);
+    swigfaissJNI.Clustering_train(
+        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), Index.getCPtr(index), index);
   }
 
   public void post_process_centroids() {
     swigfaissJNI.Clustering_post_process_centroids(swigCPtr, this);
   }
-
 }
