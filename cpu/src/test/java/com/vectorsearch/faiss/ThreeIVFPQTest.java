@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 import static com.vectorsearch.faiss.utils.IndexHelper.makeRandomFloatArray;
 import static com.vectorsearch.faiss.utils.IndexHelper.show;
 
-public class ThreeIVFPQ extends FaissTest {
+public class ThreeIVFPQTest extends FaissTest {
 
     private static final Logger LOGGER = Logger.getLogger(OneFlatTest.class.getName());
     private static final int dimension = 64;            // dimension of the vector
@@ -25,7 +25,7 @@ public class ThreeIVFPQ extends FaissTest {
     private final IndexFlatL2 quantizer;
     private final IndexIVFPQ index;
 
-    public ThreeIVFPQ() {
+    public ThreeIVFPQTest() {
         inputVectors = makeRandomFloatArray(inputRowCount, dimension, random);
         queryVectors = makeRandomFloatArray(queryRowCount, dimension, random);
         quantizer = new IndexFlatL2(dimension);
@@ -55,7 +55,7 @@ public class ThreeIVFPQ extends FaissTest {
 
     @Test
     public void threeIVFPQTest() {
-        final ThreeIVFPQ threeIVFPQ = new ThreeIVFPQ();
+        final ThreeIVFPQTest threeIVFPQ = new ThreeIVFPQTest();
         LOGGER.info("****************************************************");
         LOGGER.info("Training index..");
         threeIVFPQ.train();

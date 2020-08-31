@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 import static com.vectorsearch.faiss.utils.IndexHelper.makeRandomFloatArray;
 import static com.vectorsearch.faiss.utils.IndexHelper.show;
 
-public class TwoIVFFlat extends FaissTest {
+public class TwoIVFFlatTest extends FaissTest {
     private static final Logger LOGGER = Logger.getLogger(OneFlatTest.class.getName());
     private static final int dimension = 64;            // dimension of the vector
     private static final int inputRowCount = 100000;    // no of input vectors
@@ -20,7 +20,7 @@ public class TwoIVFFlat extends FaissTest {
     private final IndexFlatL2 quantizer;
     private final IndexIVFFlat index;
 
-    public TwoIVFFlat() {
+    public TwoIVFFlatTest() {
         inputVectors = makeRandomFloatArray(inputRowCount, dimension, random);
         queryVectors = makeRandomFloatArray(queryRowCount, dimension, random);
         quantizer = new IndexFlatL2(dimension);
@@ -50,7 +50,7 @@ public class TwoIVFFlat extends FaissTest {
 
     @Test
     public void twoIVFFlatTest() {
-        final TwoIVFFlat twoIVFFlat = new TwoIVFFlat();
+        final TwoIVFFlatTest twoIVFFlat = new TwoIVFFlatTest();
         LOGGER.info("****************************************************");
         LOGGER.info("Training index..");
         twoIVFFlat.train();
