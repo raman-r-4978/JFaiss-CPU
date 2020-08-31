@@ -3,7 +3,8 @@ package com.vectorsearch.faiss;
 import com.vectorsearch.faiss.swig.IndexFlatL2;
 import com.vectorsearch.faiss.swig.floatArray;
 import com.vectorsearch.faiss.swig.longArray;
-import org.junit.Test;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 
 import java.util.logging.Logger;
 
@@ -46,6 +47,7 @@ public class OneFlatTest extends FaissTest {
     }
 
     @Test
+    @Order(1)
     public void oneFlatTest() {
         final OneFlatTest oneFlat = new OneFlatTest();
         LOGGER.info("****************************************************");
@@ -56,5 +58,4 @@ public class OneFlatTest extends FaissTest {
         LOGGER.info("****************************************************");
         assert true;
     }
-
 }

@@ -1,7 +1,8 @@
 package com.vectorsearch.faiss;
 
 import com.vectorsearch.faiss.swig.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 
 import java.util.logging.Logger;
 
@@ -49,6 +50,7 @@ public class TwoIVFFlatTest extends FaissTest {
     }
 
     @Test
+    @Order(2)
     public void twoIVFFlatTest() {
         final TwoIVFFlatTest twoIVFFlat = new TwoIVFFlatTest();
         LOGGER.info("****************************************************");
