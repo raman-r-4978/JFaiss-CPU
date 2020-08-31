@@ -3,7 +3,7 @@ package com.vectorsearch.faiss;
 import com.vectorsearch.faiss.swig.IndexFlatL2;
 import com.vectorsearch.faiss.swig.floatArray;
 import com.vectorsearch.faiss.swig.longArray;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.logging.Logger;
 

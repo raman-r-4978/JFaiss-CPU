@@ -1,7 +1,7 @@
 package com.vectorsearch.faiss;
 
 import com.vectorsearch.faiss.swig.*;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.logging.Logger;
 
