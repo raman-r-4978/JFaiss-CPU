@@ -1,5 +1,7 @@
 package com.vectorsearch.faiss.utils;
 
+import com.nativeutils.NativeUtils;
+
 import java.io.IOException;
 
 public class JFaissInitializer {
