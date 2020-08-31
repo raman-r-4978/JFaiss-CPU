@@ -4,7 +4,6 @@ import com.vectorsearch.faiss.swig.IndexFlatL2;
 import com.vectorsearch.faiss.swig.IndexIVFPQ;
 import com.vectorsearch.faiss.swig.floatArray;
 import com.vectorsearch.faiss.swig.longArray;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import java.util.logging.Logger;
@@ -55,7 +54,6 @@ public class ThreeIVFPQTest extends FaissTest {
     }
 
     @Test
-    @Order(3)
     public void threeIVFPQTest() {
         final ThreeIVFPQTest threeIVFPQ = new ThreeIVFPQTest();
         LOGGER.info("****************************************************");
