@@ -9,7 +9,7 @@ import static com.vectorsearch.faiss.utils.IndexHelper.makeRandomFloatArray;
 import static com.vectorsearch.faiss.utils.IndexHelper.show;
 
 public class TwoIVFFlat extends FaissTestCase {
-    private static final Logger LOGGER = Logger.getLogger(OneFlat.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(TwoIVFFlat.class.getName());
     private static final int dimension = 64;            // dimension of the vector
     private static final int inputRowCount = 100000;    // no of input vectors
     private static final int queryRowCount = 10000;     // no of of query vectors

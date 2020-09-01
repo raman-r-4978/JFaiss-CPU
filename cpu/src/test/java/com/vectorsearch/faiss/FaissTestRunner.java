@@ -17,7 +17,7 @@ public class FaissTestRunner {
     public void runUnitTests() {
         if (isValidOS()) {
             final Result result = JUnitCore.runClasses(FaissTestSuite.class);
-            for (Failure failure : result.getFailures()) {
+            for (final Failure failure : result.getFailures()) {
                 System.out.println(failure.toString());
             }
             System.out.println(result.wasSuccessful());

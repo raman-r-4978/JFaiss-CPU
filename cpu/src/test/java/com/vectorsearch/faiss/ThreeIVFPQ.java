@@ -13,7 +13,7 @@ import static com.vectorsearch.faiss.utils.IndexHelper.show;
 
 public class ThreeIVFPQ extends FaissTestCase {
 
-    private static final Logger LOGGER = Logger.getLogger(OneFlat.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(ThreeIVFPQ.class.getName());
     private static final int dimension = 64;            // dimension of the vector
     private static final int inputRowCount = 100000;    // no of input vectors
     private static final int queryRowCount = 10000;     // no of of query vectors
