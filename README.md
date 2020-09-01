@@ -1,18 +1,23 @@
-# JFaiss
+# JFaiss **(Linux only)**
 
-Faiss bindings for Java **(linux only so far)**
+Faiss bindings for Java
 
 ## Requirement
 
 - JDK v1.8
 - Apache Maven v3.6.3
-- Docker v19.03.12 (build 48a66213fe)
+- Docker v19.03.12
 
 ## Build JAR (maven)
 
+Run the test cases
+```
+mvn clean test -Dtest=FaissTestRunner
+```
+
 Creating a JAR
 ```
-mvn clean test package
+mvn package
 ```
 
 ## Building from source (docker)
