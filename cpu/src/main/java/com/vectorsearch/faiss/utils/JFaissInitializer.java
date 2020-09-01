@@ -11,7 +11,7 @@ public class JFaissInitializer {
     public static void initialize() throws IOException {
         if (!initialized) {
             initialized = true;
-            NativeUtils.loadLibraryFromJar("/_swigfaiss.so");
+            NativeUtils.loadLibraryFromJar(JFaissConstants.SWIGFAISS_SO_FILE);
         }
     }
 }

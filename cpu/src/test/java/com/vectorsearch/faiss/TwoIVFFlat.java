@@ -1,9 +1,6 @@
 package com.vectorsearch.faiss;
 
-import com.vectorsearch.faiss.swig.IndexFlatL2;
-import com.vectorsearch.faiss.swig.IndexIVFPQ;
-import com.vectorsearch.faiss.swig.floatArray;
-import com.vectorsearch.faiss.swig.longArray;
+import com.vectorsearch.faiss.swig.*;
 import org.junit.Test;
 
 import java.util.logging.Logger;
@@ -11,25 +8,23 @@ import java.util.logging.Logger;
 import static com.vectorsearch.faiss.utils.IndexHelper.makeRandomFloatArray;
 import static com.vectorsearch.faiss.utils.IndexHelper.show;
 
-public class ThreeIVFPQTest extends FaissTest {
-
-    private static final Logger LOGGER = Logger.getLogger(OneFlatTest.class.getName());
+public class TwoIVFFlat extends FaissTestCase {
+    private static final Logger LOGGER = Logger.getLogger(OneFlat.class.getName());
     private static final int dimension = 64;            // dimension of the vector
     private static final int inputRowCount = 100000;    // no of input vectors
     private static final int queryRowCount = 10000;     // no of of query vectors
     private static final int nlist = 100;               // no of clusters
-    private static final int m = 8;
 
     private final floatArray inputVectors;
     private final floatArray queryVectors;
     private final IndexFlatL2 quantizer;
-    private final IndexIVFPQ index;
+    private final IndexIVFFlat index;
 
-    public ThreeIVFPQTest() {
+    public TwoIVFFlat() {
         inputVectors = makeRandomFloatArray(inputRowCount, dimension, random);
         queryVectors = makeRandomFloatArray(queryRowCount, dimension, random);
         quantizer = new IndexFlatL2(dimension);
-        index = new IndexIVFPQ(quantizer, dimension, nlist, m, 8);
+        index = new IndexIVFFlat(quantizer, dimension, nlist, MetricType.METRIC_L2);
     }
 
     @Override
@@ -54,13 +49,13 @@ public class ThreeIVFPQTest extends FaissTest {
     }
 
     @Test
-    public void threeIVFPQTest() {
-        final ThreeIVFPQTest threeIVFPQ = new ThreeIVFPQTest();
+    public void twoIVFFlatTest() {
+        final TwoIVFFlat twoIVFFlat = new TwoIVFFlat();
         LOGGER.info("****************************************************");
         LOGGER.info("Training index..");
-        threeIVFPQ.train();
+        twoIVFFlat.train();
         LOGGER.info("Searching index..");
-        threeIVFPQ.search();
+        twoIVFFlat.search();
         LOGGER.info("****************************************************");
         assert true;
     }

@@ -10,8 +10,8 @@ import java.util.logging.Logger;
 import static com.vectorsearch.faiss.utils.IndexHelper.makeRandomFloatArray;
 import static com.vectorsearch.faiss.utils.IndexHelper.show;
 
-public class OneFlatTest extends FaissTest {
-    private static final Logger LOGGER = Logger.getLogger(OneFlatTest.class.getName());
+public class OneFlat extends FaissTestCase {
+    private static final Logger LOGGER = Logger.getLogger(OneFlat.class.getName());
     private static final int dimension = 64;         // dimension of the vector
     private static final int inputRowCount = 100000; // no of input vectors
     private static final int queryRowCount = 10000;  // no of of query vectors
@@ -20,7 +20,7 @@ public class OneFlatTest extends FaissTest {
     private final floatArray queryVectors;
     private final IndexFlatL2 index;
 
-    public OneFlatTest() {
+    public OneFlat() {
         inputVectors = makeRandomFloatArray(inputRowCount, dimension, random);
         queryVectors = makeRandomFloatArray(queryRowCount, dimension, random);
         index = new IndexFlatL2(dimension);
@@ -47,7 +47,7 @@ public class OneFlatTest extends FaissTest {
 
     @Test
     public void oneFlatTest() {
-        final OneFlatTest oneFlat = new OneFlatTest();
+        final OneFlat oneFlat = new OneFlat();
         LOGGER.info("****************************************************");
         LOGGER.info("Training index..");
         oneFlat.train();
