@@ -4,11 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.vectorsearch.faiss</groupId>
+    <groupId>com.github.ramanrajarathinam</groupId>
     <artifactId>JFaiss-CPU</artifactId>
     <version>1.0.0</version>
-
-    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.target>8</maven.compiler.target>

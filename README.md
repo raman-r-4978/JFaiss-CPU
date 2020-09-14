@@ -1,6 +1,6 @@
 # JFaiss-CPU **(Linux only)**
 
-Faiss bindings for Java
+Faiss (CPU) bindings for Java 
 
 ## Requirement
 
