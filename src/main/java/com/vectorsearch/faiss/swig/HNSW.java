@@ -426,7 +426,7 @@ public class HNSW {
       int k,
       SWIGTYPE_p_long I,
       SWIGTYPE_p_float D,
-      HNSW.MinimaxHeap candidates,
+      MinimaxHeap candidates,
       VisitedTable vt,
       int level,
       int nres_in) {
@@ -438,7 +438,7 @@ public class HNSW {
         k,
         SWIGTYPE_p_long.getCPtr(I),
         SWIGTYPE_p_float.getCPtr(D),
-        HNSW.MinimaxHeap.getCPtr(candidates),
+        MinimaxHeap.getCPtr(candidates),
         candidates,
         VisitedTable.getCPtr(vt),
         vt,
@@ -451,7 +451,7 @@ public class HNSW {
       int k,
       SWIGTYPE_p_long I,
       SWIGTYPE_p_float D,
-      HNSW.MinimaxHeap candidates,
+      MinimaxHeap candidates,
       VisitedTable vt,
       int level) {
     return swigfaissJNI.HNSW_search_from_candidates__SWIG_1(
@@ -462,7 +462,7 @@ public class HNSW {
         k,
         SWIGTYPE_p_long.getCPtr(I),
         SWIGTYPE_p_float.getCPtr(D),
-        HNSW.MinimaxHeap.getCPtr(candidates),
+        MinimaxHeap.getCPtr(candidates),
         candidates,
         VisitedTable.getCPtr(vt),
         vt,

@@ -91,12 +91,12 @@ public class ProductQuantizer {
     return swigfaissJNI.ProductQuantizer_verbose_get(swigCPtr, this);
   }
 
-  public void setTrain_type(ProductQuantizer.train_type_t value) {
+  public void setTrain_type(train_type_t value) {
     swigfaissJNI.ProductQuantizer_train_type_set(swigCPtr, this, value.swigValue());
   }
 
-  public ProductQuantizer.train_type_t getTrain_type() {
-    return ProductQuantizer.train_type_t.swigToEnum(
+  public train_type_t getTrain_type() {
+    return train_type_t.swigToEnum(
         swigfaissJNI.ProductQuantizer_train_type_get(swigCPtr, this));
   }
 
@@ -673,16 +673,16 @@ public class ProductQuantizer {
   }
 
   public static final class train_type_t {
-    public static final ProductQuantizer.train_type_t Train_default =
-        new ProductQuantizer.train_type_t("Train_default");
-    public static final ProductQuantizer.train_type_t Train_hot_start =
-        new ProductQuantizer.train_type_t("Train_hot_start");
-    public static final ProductQuantizer.train_type_t Train_shared =
-        new ProductQuantizer.train_type_t("Train_shared");
-    public static final ProductQuantizer.train_type_t Train_hypercube =
-        new ProductQuantizer.train_type_t("Train_hypercube");
-    public static final ProductQuantizer.train_type_t Train_hypercube_pca =
-        new ProductQuantizer.train_type_t("Train_hypercube_pca");
+    public static final train_type_t Train_default =
+        new train_type_t("Train_default");
+    public static final train_type_t Train_hot_start =
+        new train_type_t("Train_hot_start");
+    public static final train_type_t Train_shared =
+        new train_type_t("Train_shared");
+    public static final train_type_t Train_hypercube =
+        new train_type_t("Train_hypercube");
+    public static final train_type_t Train_hypercube_pca =
+        new train_type_t("Train_hypercube_pca");
 
     public final int swigValue() {
       return swigValue;

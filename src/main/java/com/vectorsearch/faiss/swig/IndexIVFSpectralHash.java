@@ -68,12 +68,12 @@ public class IndexIVFSpectralHash extends IndexIVF {
     return swigfaissJNI.IndexIVFSpectralHash_period_get(swigCPtr, this);
   }
 
-  public void setThreshold_type(IndexIVFSpectralHash.ThresholdType value) {
+  public void setThreshold_type(ThresholdType value) {
     swigfaissJNI.IndexIVFSpectralHash_threshold_type_set(swigCPtr, this, value.swigValue());
   }
 
-  public IndexIVFSpectralHash.ThresholdType getThreshold_type() {
-    return IndexIVFSpectralHash.ThresholdType.swigToEnum(
+  public ThresholdType getThreshold_type() {
+    return ThresholdType.swigToEnum(
         swigfaissJNI.IndexIVFSpectralHash_threshold_type_get(swigCPtr, this));
   }
 
@@ -137,14 +137,14 @@ public class IndexIVFSpectralHash extends IndexIVF {
   }
 
   public static final class ThresholdType {
-    public static final IndexIVFSpectralHash.ThresholdType Thresh_global =
-        new IndexIVFSpectralHash.ThresholdType("Thresh_global");
-    public static final IndexIVFSpectralHash.ThresholdType Thresh_centroid =
-        new IndexIVFSpectralHash.ThresholdType("Thresh_centroid");
-    public static final IndexIVFSpectralHash.ThresholdType Thresh_centroid_half =
-        new IndexIVFSpectralHash.ThresholdType("Thresh_centroid_half");
-    public static final IndexIVFSpectralHash.ThresholdType Thresh_median =
-        new IndexIVFSpectralHash.ThresholdType("Thresh_median");
+    public static final ThresholdType Thresh_global =
+        new ThresholdType("Thresh_global");
+    public static final ThresholdType Thresh_centroid =
+        new ThresholdType("Thresh_centroid");
+    public static final ThresholdType Thresh_centroid_half =
+        new ThresholdType("Thresh_centroid_half");
+    public static final ThresholdType Thresh_median =
+        new ThresholdType("Thresh_median");
 
     public final int swigValue() {
       return swigValue;

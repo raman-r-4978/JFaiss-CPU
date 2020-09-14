@@ -1,4 +1,4 @@
-# JFaiss **(Linux only)**
+# JFaiss-CPU **(Linux only)**
 
 Faiss bindings for Java
 
@@ -24,8 +24,8 @@ mvn package
 
 Install faiss and generate required Java files
 ```
-git clone https://github.com/RamanRajarathinam/JFaiss.git
-cd JFaiss
+git clone https://github.com/RamanRajarathinam/JFaiss-CPU.git
+cd JFaiss-CPU
 git submodule update --init
 docker build -t jfaiss-source .
 ```

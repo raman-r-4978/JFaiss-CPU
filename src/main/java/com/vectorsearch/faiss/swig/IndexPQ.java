@@ -138,12 +138,12 @@ public class IndexPQ extends Index {
     return (cPtr == 0) ? null : new PolysemousTraining(cPtr, false);
   }
 
-  public void setSearch_type(IndexPQ.Search_type_t value) {
+  public void setSearch_type(Search_type_t value) {
     swigfaissJNI.IndexPQ_search_type_set(swigCPtr, this, value.swigValue());
   }
 
-  public IndexPQ.Search_type_t getSearch_type() {
-    return IndexPQ.Search_type_t.swigToEnum(swigfaissJNI.IndexPQ_search_type_get(swigCPtr, this));
+  public Search_type_t getSearch_type() {
+    return Search_type_t.swigToEnum(swigfaissJNI.IndexPQ_search_type_get(swigCPtr, this));
   }
 
   public void setEncode_signs(boolean value) {
@@ -192,15 +192,15 @@ public class IndexPQ extends Index {
   }
 
   public static final class Search_type_t {
-    public static final IndexPQ.Search_type_t ST_PQ = new IndexPQ.Search_type_t("ST_PQ");
-    public static final IndexPQ.Search_type_t ST_HE = new IndexPQ.Search_type_t("ST_HE");
-    public static final IndexPQ.Search_type_t ST_generalized_HE =
-        new IndexPQ.Search_type_t("ST_generalized_HE");
-    public static final IndexPQ.Search_type_t ST_SDC = new IndexPQ.Search_type_t("ST_SDC");
-    public static final IndexPQ.Search_type_t ST_polysemous =
-        new IndexPQ.Search_type_t("ST_polysemous");
-    public static final IndexPQ.Search_type_t ST_polysemous_generalize =
-        new IndexPQ.Search_type_t("ST_polysemous_generalize");
+    public static final Search_type_t ST_PQ = new Search_type_t("ST_PQ");
+    public static final Search_type_t ST_HE = new Search_type_t("ST_HE");
+    public static final Search_type_t ST_generalized_HE =
+        new Search_type_t("ST_generalized_HE");
+    public static final Search_type_t ST_SDC = new Search_type_t("ST_SDC");
+    public static final Search_type_t ST_polysemous =
+        new Search_type_t("ST_polysemous");
+    public static final Search_type_t ST_polysemous_generalize =
+        new Search_type_t("ST_polysemous_generalize");
 
     public final int swigValue() {
       return swigValue;

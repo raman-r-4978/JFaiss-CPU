@@ -35,21 +35,21 @@ public class ScalarQuantizer {
     }
   }
 
-  public void setQtype(ScalarQuantizer.QuantizerType value) {
+  public void setQtype(QuantizerType value) {
     swigfaissJNI.ScalarQuantizer_qtype_set(swigCPtr, this, value.swigValue());
   }
 
-  public ScalarQuantizer.QuantizerType getQtype() {
-    return ScalarQuantizer.QuantizerType.swigToEnum(
+  public QuantizerType getQtype() {
+    return QuantizerType.swigToEnum(
         swigfaissJNI.ScalarQuantizer_qtype_get(swigCPtr, this));
   }
 
-  public void setRangestat(ScalarQuantizer.RangeStat value) {
+  public void setRangestat(RangeStat value) {
     swigfaissJNI.ScalarQuantizer_rangestat_set(swigCPtr, this, value.swigValue());
   }
 
-  public ScalarQuantizer.RangeStat getRangestat() {
-    return ScalarQuantizer.RangeStat.swigToEnum(
+  public RangeStat getRangestat() {
+    return RangeStat.swigToEnum(
         swigfaissJNI.ScalarQuantizer_rangestat_get(swigCPtr, this));
   }
 
@@ -86,7 +86,7 @@ public class ScalarQuantizer {
     return (cPtr == 0) ? null : new FloatVector(cPtr, false);
   }
 
-  public ScalarQuantizer(long d, ScalarQuantizer.QuantizerType qtype) {
+  public ScalarQuantizer(long d, QuantizerType qtype) {
     this(swigfaissJNI.new_ScalarQuantizer__SWIG_0(d, qtype.swigValue()), true);
   }
 
@@ -159,9 +159,9 @@ public class ScalarQuantizer {
     }
   }
 
-  public ScalarQuantizer.Quantizer select_quantizer() {
+  public Quantizer select_quantizer() {
     long cPtr = swigfaissJNI.ScalarQuantizer_select_quantizer(swigCPtr, this);
-    return (cPtr == 0) ? null : new ScalarQuantizer.Quantizer(cPtr, false);
+    return (cPtr == 0) ? null : new Quantizer(cPtr, false);
   }
 
   public SWIGTYPE_p_faiss__ScalarQuantizer__SQDistanceComputer get_distance_computer(
@@ -204,20 +204,20 @@ public class ScalarQuantizer {
   }
 
   public static final class QuantizerType {
-    public static final ScalarQuantizer.QuantizerType QT_8bit =
-        new ScalarQuantizer.QuantizerType("QT_8bit");
-    public static final ScalarQuantizer.QuantizerType QT_4bit =
-        new ScalarQuantizer.QuantizerType("QT_4bit");
-    public static final ScalarQuantizer.QuantizerType QT_8bit_uniform =
-        new ScalarQuantizer.QuantizerType("QT_8bit_uniform");
-    public static final ScalarQuantizer.QuantizerType QT_4bit_uniform =
-        new ScalarQuantizer.QuantizerType("QT_4bit_uniform");
-    public static final ScalarQuantizer.QuantizerType QT_fp16 =
-        new ScalarQuantizer.QuantizerType("QT_fp16");
-    public static final ScalarQuantizer.QuantizerType QT_8bit_direct =
-        new ScalarQuantizer.QuantizerType("QT_8bit_direct");
-    public static final ScalarQuantizer.QuantizerType QT_6bit =
-        new ScalarQuantizer.QuantizerType("QT_6bit");
+    public static final QuantizerType QT_8bit =
+        new QuantizerType("QT_8bit");
+    public static final QuantizerType QT_4bit =
+        new QuantizerType("QT_4bit");
+    public static final QuantizerType QT_8bit_uniform =
+        new QuantizerType("QT_8bit_uniform");
+    public static final QuantizerType QT_4bit_uniform =
+        new QuantizerType("QT_4bit_uniform");
+    public static final QuantizerType QT_fp16 =
+        new QuantizerType("QT_fp16");
+    public static final QuantizerType QT_8bit_direct =
+        new QuantizerType("QT_8bit_direct");
+    public static final QuantizerType QT_6bit =
+        new QuantizerType("QT_6bit");
 
     public final int swigValue() {
       return swigValue;
@@ -263,14 +263,14 @@ public class ScalarQuantizer {
   }
 
   public static final class RangeStat {
-    public static final ScalarQuantizer.RangeStat RS_minmax =
-        new ScalarQuantizer.RangeStat("RS_minmax");
-    public static final ScalarQuantizer.RangeStat RS_meanstd =
-        new ScalarQuantizer.RangeStat("RS_meanstd");
-    public static final ScalarQuantizer.RangeStat RS_quantiles =
-        new ScalarQuantizer.RangeStat("RS_quantiles");
-    public static final ScalarQuantizer.RangeStat RS_optim =
-        new ScalarQuantizer.RangeStat("RS_optim");
+    public static final RangeStat RS_minmax =
+        new RangeStat("RS_minmax");
+    public static final RangeStat RS_meanstd =
+        new RangeStat("RS_meanstd");
+    public static final RangeStat RS_quantiles =
+        new RangeStat("RS_quantiles");
+    public static final RangeStat RS_optim =
+        new RangeStat("RS_optim");
 
     public final int swigValue() {
       return swigValue;

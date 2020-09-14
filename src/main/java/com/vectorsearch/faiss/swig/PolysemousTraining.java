@@ -35,12 +35,12 @@ public class PolysemousTraining extends SimulatedAnnealingParameters {
     super.delete();
   }
 
-  public void setOptimization_type(PolysemousTraining.Optimization_type_t value) {
+  public void setOptimization_type(Optimization_type_t value) {
     swigfaissJNI.PolysemousTraining_optimization_type_set(swigCPtr, this, value.swigValue());
   }
 
-  public PolysemousTraining.Optimization_type_t getOptimization_type() {
-    return PolysemousTraining.Optimization_type_t.swigToEnum(
+  public Optimization_type_t getOptimization_type() {
+    return Optimization_type_t.swigToEnum(
         swigfaissJNI.PolysemousTraining_optimization_type_get(swigCPtr, this));
   }
 
@@ -88,12 +88,12 @@ public class PolysemousTraining extends SimulatedAnnealingParameters {
   }
 
   public static final class Optimization_type_t {
-    public static final PolysemousTraining.Optimization_type_t OT_None =
-        new PolysemousTraining.Optimization_type_t("OT_None");
-    public static final PolysemousTraining.Optimization_type_t OT_ReproduceDistances_affine =
-        new PolysemousTraining.Optimization_type_t("OT_ReproduceDistances_affine");
-    public static final PolysemousTraining.Optimization_type_t OT_Ranking_weighted_diff =
-        new PolysemousTraining.Optimization_type_t("OT_Ranking_weighted_diff");
+    public static final Optimization_type_t OT_None =
+        new Optimization_type_t("OT_None");
+    public static final Optimization_type_t OT_ReproduceDistances_affine =
+        new Optimization_type_t("OT_ReproduceDistances_affine");
+    public static final Optimization_type_t OT_Ranking_weighted_diff =
+        new Optimization_type_t("OT_Ranking_weighted_diff");
 
     public final int swigValue() {
       return swigValue;
