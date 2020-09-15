@@ -24,19 +24,19 @@ To add a dependency on JFaiss-CPU using Maven, use
 ## Build JAR (maven)
 
 Run the test cases
-```
+```sh
 mvn clean test -Dtest=FaissTestRunner
 ```
 
 Creating a JAR
-```
+```sh
 mvn package
 ```
 
 ## Building from source (docker)
 
 Install faiss and generate required Java files
-```
+```sh
 git clone https://github.com/RamanRajarathinam/JFaiss-CPU.git
 cd JFaiss-CPU
 git submodule update --init
@@ -46,7 +46,7 @@ This will generate required `.java` files from `swigfaiss.swig`
 
 ## To-do
 
-* [ ] Publish to mvn
+* [x] Publish to mvn
 * [ ] GPU support
 
 ## Reference
