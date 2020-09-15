@@ -2,6 +2,19 @@
 
 Faiss (CPU) bindings for Java 
 
+## Adding JFaiss-CPU to you build
+
+To add a dependency on JFaiss-CPU using Maven, use
+
+```xml
+<dependency>
+  <groupId>com.github.ramanrajarathinam</groupId>
+  <artifactId>JFaiss-CPU</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
+
 ## Requirement
 
 - JDK v1.8
