@@ -36,13 +36,11 @@ public class IndexIDMap2 extends IndexIDMap {
   }
 
   public void setRev_map(SWIGTYPE_p_std__unordered_mapT_long_long_t value) {
-    swigfaissJNI.IndexIDMap2_rev_map_set(
-        swigCPtr, this, SWIGTYPE_p_std__unordered_mapT_long_long_t.getCPtr(value));
+    swigfaissJNI.IndexIDMap2_rev_map_set(swigCPtr, this, SWIGTYPE_p_std__unordered_mapT_long_long_t.getCPtr(value));
   }
 
   public SWIGTYPE_p_std__unordered_mapT_long_long_t getRev_map() {
-    return new SWIGTYPE_p_std__unordered_mapT_long_long_t(
-        swigfaissJNI.IndexIDMap2_rev_map_get(swigCPtr, this), true);
+    return new SWIGTYPE_p_std__unordered_mapT_long_long_t(swigfaissJNI.IndexIDMap2_rev_map_get(swigCPtr, this), true);
   }
 
   public IndexIDMap2(Index index) {
@@ -54,8 +52,7 @@ public class IndexIDMap2 extends IndexIDMap {
   }
 
   public void add_with_ids(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long xids) {
-    swigfaissJNI.IndexIDMap2_add_with_ids(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
+    swigfaissJNI.IndexIDMap2_add_with_ids(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
   }
 
   public long remove_ids(IDSelector sel) {
@@ -69,4 +66,5 @@ public class IndexIDMap2 extends IndexIDMap {
   public IndexIDMap2() {
     this(swigfaissJNI.new_IndexIDMap2__SWIG_1(), true);
   }
+
 }

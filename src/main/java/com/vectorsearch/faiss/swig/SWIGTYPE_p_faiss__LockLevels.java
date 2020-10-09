@@ -23,3 +23,4 @@ public class SWIGTYPE_p_faiss__LockLevels {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }
+

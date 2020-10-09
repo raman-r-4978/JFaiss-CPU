@@ -58,4 +58,5 @@ public class IDSelectorRange extends IDSelector {
   public boolean is_member(int id) {
     return swigfaissJNI.IDSelectorRange_is_member(swigCPtr, this, id);
   }
+
 }

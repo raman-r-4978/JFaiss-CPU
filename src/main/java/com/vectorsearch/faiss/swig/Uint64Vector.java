@@ -67,4 +67,5 @@ public class Uint64Vector {
   public void swap(Uint64Vector other) {
     swigfaissJNI.Uint64Vector_swap(swigCPtr, this, Uint64Vector.getCPtr(other), other);
   }
+
 }

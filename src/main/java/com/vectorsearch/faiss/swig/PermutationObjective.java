@@ -44,12 +44,11 @@ public class PermutationObjective {
   }
 
   public double compute_cost(SWIGTYPE_p_int perm) {
-    return swigfaissJNI.PermutationObjective_compute_cost(
-        swigCPtr, this, SWIGTYPE_p_int.getCPtr(perm));
+    return swigfaissJNI.PermutationObjective_compute_cost(swigCPtr, this, SWIGTYPE_p_int.getCPtr(perm));
   }
 
   public double cost_update(SWIGTYPE_p_int perm, int iw, int jw) {
-    return swigfaissJNI.PermutationObjective_cost_update(
-        swigCPtr, this, SWIGTYPE_p_int.getCPtr(perm), iw, jw);
+    return swigfaissJNI.PermutationObjective_cost_update(swigCPtr, this, SWIGTYPE_p_int.getCPtr(perm), iw, jw);
   }
+
 }

@@ -66,24 +66,15 @@ public class IndexBinaryIDMap extends IndexBinary {
   }
 
   public void add_with_ids(int n, SWIGTYPE_p_unsigned_char x, SWIGTYPE_p_long xids) {
-    swigfaissJNI.IndexBinaryIDMap_add_with_ids(
-        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
+    swigfaissJNI.IndexBinaryIDMap_add_with_ids(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
   }
 
   public void add(int n, SWIGTYPE_p_unsigned_char x) {
     swigfaissJNI.IndexBinaryIDMap_add(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexBinaryIDMap_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_unsigned_char.getCPtr(x),
-        k,
-        SWIGTYPE_p_int.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexBinaryIDMap_search(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), k, SWIGTYPE_p_int.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void train(int n, SWIGTYPE_p_unsigned_char x) {
@@ -98,19 +89,12 @@ public class IndexBinaryIDMap extends IndexBinary {
     return swigfaissJNI.IndexBinaryIDMap_remove_ids(swigCPtr, this, IDSelector.getCPtr(sel), sel);
   }
 
-  public void range_search(
-      int n, SWIGTYPE_p_unsigned_char x, int radius, RangeSearchResult result) {
-    swigfaissJNI.IndexBinaryIDMap_range_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_unsigned_char.getCPtr(x),
-        radius,
-        RangeSearchResult.getCPtr(result),
-        result);
+  public void range_search(int n, SWIGTYPE_p_unsigned_char x, int radius, RangeSearchResult result) {
+    swigfaissJNI.IndexBinaryIDMap_range_search(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), radius, RangeSearchResult.getCPtr(result), result);
   }
 
   public IndexBinaryIDMap() {
     this(swigfaissJNI.new_IndexBinaryIDMap__SWIG_1(), true);
   }
+
 }

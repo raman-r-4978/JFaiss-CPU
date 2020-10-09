@@ -64,8 +64,7 @@ public class ZnSphereCodecRec extends EnumeratedVectors {
   }
 
   public long encode_centroid(SWIGTYPE_p_float c) {
-    return swigfaissJNI.ZnSphereCodecRec_encode_centroid(
-        swigCPtr, this, SWIGTYPE_p_float.getCPtr(c));
+    return swigfaissJNI.ZnSphereCodecRec_encode_centroid(swigCPtr, this, SWIGTYPE_p_float.getCPtr(c));
   }
 
   public void decode(long code, SWIGTYPE_p_float c) {
@@ -86,8 +85,7 @@ public class ZnSphereCodecRec extends EnumeratedVectors {
   }
 
   public void setAll_nv_cum(Uint64Vector value) {
-    swigfaissJNI.ZnSphereCodecRec_all_nv_cum_set(
-        swigCPtr, this, Uint64Vector.getCPtr(value), value);
+    swigfaissJNI.ZnSphereCodecRec_all_nv_cum_set(swigCPtr, this, Uint64Vector.getCPtr(value), value);
   }
 
   public Uint64Vector getAll_nv_cum() {
@@ -104,8 +102,7 @@ public class ZnSphereCodecRec extends EnumeratedVectors {
   }
 
   public void setDecode_cache(FloatVectorVector value) {
-    swigfaissJNI.ZnSphereCodecRec_decode_cache_set(
-        swigCPtr, this, FloatVectorVector.getCPtr(value), value);
+    swigfaissJNI.ZnSphereCodecRec_decode_cache_set(swigCPtr, this, FloatVectorVector.getCPtr(value), value);
   }
 
   public FloatVectorVector getDecode_cache() {
@@ -124,4 +121,5 @@ public class ZnSphereCodecRec extends EnumeratedVectors {
   public void set_nv_cum(int ld, int r2t, int r2a, long v) {
     swigfaissJNI.ZnSphereCodecRec_set_nv_cum(swigCPtr, this, ld, r2t, r2a, v);
   }
+
 }

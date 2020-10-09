@@ -67,4 +67,5 @@ public class RepeatVector {
   public void swap(RepeatVector other) {
     swigfaissJNI.RepeatVector_swap(swigCPtr, this, RepeatVector.getCPtr(other), other);
   }
+
 }

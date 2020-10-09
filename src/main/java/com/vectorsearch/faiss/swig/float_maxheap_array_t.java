@@ -84,68 +84,39 @@ public class float_maxheap_array_t {
   }
 
   public void addn(long nj, SWIGTYPE_p_float vin, int j0, long i0, int ni) {
-    swigfaissJNI.float_maxheap_array_t_addn__SWIG_0(
-        swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), j0, i0, ni);
+    swigfaissJNI.float_maxheap_array_t_addn__SWIG_0(swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), j0, i0, ni);
   }
 
   public void addn(long nj, SWIGTYPE_p_float vin, int j0, long i0) {
-    swigfaissJNI.float_maxheap_array_t_addn__SWIG_1(
-        swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), j0, i0);
+    swigfaissJNI.float_maxheap_array_t_addn__SWIG_1(swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), j0, i0);
   }
 
   public void addn(long nj, SWIGTYPE_p_float vin, int j0) {
-    swigfaissJNI.float_maxheap_array_t_addn__SWIG_2(
-        swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), j0);
+    swigfaissJNI.float_maxheap_array_t_addn__SWIG_2(swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), j0);
   }
 
   public void addn(long nj, SWIGTYPE_p_float vin) {
-    swigfaissJNI.float_maxheap_array_t_addn__SWIG_3(
-        swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin));
+    swigfaissJNI.float_maxheap_array_t_addn__SWIG_3(swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin));
   }
 
-  public void addn_with_ids(
-      long nj, SWIGTYPE_p_float vin, SWIGTYPE_p_long id_in, int id_stride, long i0, int ni) {
-    swigfaissJNI.float_maxheap_array_t_addn_with_ids__SWIG_0(
-        swigCPtr,
-        this,
-        nj,
-        SWIGTYPE_p_float.getCPtr(vin),
-        SWIGTYPE_p_long.getCPtr(id_in),
-        id_stride,
-        i0,
-        ni);
+  public void addn_with_ids(long nj, SWIGTYPE_p_float vin, SWIGTYPE_p_long id_in, int id_stride, long i0, int ni) {
+    swigfaissJNI.float_maxheap_array_t_addn_with_ids__SWIG_0(swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), SWIGTYPE_p_long.getCPtr(id_in), id_stride, i0, ni);
   }
 
-  public void addn_with_ids(
-      long nj, SWIGTYPE_p_float vin, SWIGTYPE_p_long id_in, int id_stride, long i0) {
-    swigfaissJNI.float_maxheap_array_t_addn_with_ids__SWIG_1(
-        swigCPtr,
-        this,
-        nj,
-        SWIGTYPE_p_float.getCPtr(vin),
-        SWIGTYPE_p_long.getCPtr(id_in),
-        id_stride,
-        i0);
+  public void addn_with_ids(long nj, SWIGTYPE_p_float vin, SWIGTYPE_p_long id_in, int id_stride, long i0) {
+    swigfaissJNI.float_maxheap_array_t_addn_with_ids__SWIG_1(swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), SWIGTYPE_p_long.getCPtr(id_in), id_stride, i0);
   }
 
   public void addn_with_ids(long nj, SWIGTYPE_p_float vin, SWIGTYPE_p_long id_in, int id_stride) {
-    swigfaissJNI.float_maxheap_array_t_addn_with_ids__SWIG_2(
-        swigCPtr,
-        this,
-        nj,
-        SWIGTYPE_p_float.getCPtr(vin),
-        SWIGTYPE_p_long.getCPtr(id_in),
-        id_stride);
+    swigfaissJNI.float_maxheap_array_t_addn_with_ids__SWIG_2(swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), SWIGTYPE_p_long.getCPtr(id_in), id_stride);
   }
 
   public void addn_with_ids(long nj, SWIGTYPE_p_float vin, SWIGTYPE_p_long id_in) {
-    swigfaissJNI.float_maxheap_array_t_addn_with_ids__SWIG_3(
-        swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), SWIGTYPE_p_long.getCPtr(id_in));
+    swigfaissJNI.float_maxheap_array_t_addn_with_ids__SWIG_3(swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin), SWIGTYPE_p_long.getCPtr(id_in));
   }
 
   public void addn_with_ids(long nj, SWIGTYPE_p_float vin) {
-    swigfaissJNI.float_maxheap_array_t_addn_with_ids__SWIG_4(
-        swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin));
+    swigfaissJNI.float_maxheap_array_t_addn_with_ids__SWIG_4(swigCPtr, this, nj, SWIGTYPE_p_float.getCPtr(vin));
   }
 
   public void reorder() {
@@ -153,11 +124,11 @@ public class float_maxheap_array_t {
   }
 
   public void per_line_extrema(SWIGTYPE_p_float vals_out, SWIGTYPE_p_long idx_out) {
-    swigfaissJNI.float_maxheap_array_t_per_line_extrema(
-        swigCPtr, this, SWIGTYPE_p_float.getCPtr(vals_out), SWIGTYPE_p_long.getCPtr(idx_out));
+    swigfaissJNI.float_maxheap_array_t_per_line_extrema(swigCPtr, this, SWIGTYPE_p_float.getCPtr(vals_out), SWIGTYPE_p_long.getCPtr(idx_out));
   }
 
   public float_maxheap_array_t() {
     this(swigfaissJNI.new_float_maxheap_array_t(), true);
   }
+
 }

@@ -36,8 +36,7 @@ public class ArrayInvertedLists extends InvertedLists {
   }
 
   public void setCodes(ByteVectorVector value) {
-    swigfaissJNI.ArrayInvertedLists_codes_set(
-        swigCPtr, this, ByteVectorVector.getCPtr(value), value);
+    swigfaissJNI.ArrayInvertedLists_codes_set(swigCPtr, this, ByteVectorVector.getCPtr(value), value);
   }
 
   public ByteVectorVector getCodes() {
@@ -72,30 +71,16 @@ public class ArrayInvertedLists extends InvertedLists {
     return (cPtr == 0) ? null : new SWIGTYPE_p_long(cPtr, false);
   }
 
-  public long add_entries(
-      long list_no, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
-    return swigfaissJNI.ArrayInvertedLists_add_entries(
-        swigCPtr,
-        this,
-        list_no,
-        n_entry,
-        SWIGTYPE_p_long.getCPtr(ids),
-        SWIGTYPE_p_unsigned_char.getCPtr(code));
+  public long add_entries(long list_no, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
+    return swigfaissJNI.ArrayInvertedLists_add_entries(swigCPtr, this, list_no, n_entry, SWIGTYPE_p_long.getCPtr(ids), SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
-  public void update_entries(
-      long list_no, long offset, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
-    swigfaissJNI.ArrayInvertedLists_update_entries(
-        swigCPtr,
-        this,
-        list_no,
-        offset,
-        n_entry,
-        SWIGTYPE_p_long.getCPtr(ids),
-        SWIGTYPE_p_unsigned_char.getCPtr(code));
+  public void update_entries(long list_no, long offset, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
+    swigfaissJNI.ArrayInvertedLists_update_entries(swigCPtr, this, list_no, offset, n_entry, SWIGTYPE_p_long.getCPtr(ids), SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
   public void resize(long list_no, long new_size) {
     swigfaissJNI.ArrayInvertedLists_resize(swigCPtr, this, list_no, new_size);
   }
+
 }

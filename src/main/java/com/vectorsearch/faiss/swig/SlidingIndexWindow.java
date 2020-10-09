@@ -45,8 +45,7 @@ public class SlidingIndexWindow {
   }
 
   public void setIls(ArrayInvertedLists value) {
-    swigfaissJNI.SlidingIndexWindow_ils_set(
-        swigCPtr, this, ArrayInvertedLists.getCPtr(value), value);
+    swigfaissJNI.SlidingIndexWindow_ils_set(swigCPtr, this, ArrayInvertedLists.getCPtr(value), value);
   }
 
   public ArrayInvertedLists getIls() {
@@ -71,8 +70,7 @@ public class SlidingIndexWindow {
   }
 
   public void setSizes(LongVectorVector value) {
-    swigfaissJNI.SlidingIndexWindow_sizes_set(
-        swigCPtr, this, LongVectorVector.getCPtr(value), value);
+    swigfaissJNI.SlidingIndexWindow_sizes_set(swigCPtr, this, LongVectorVector.getCPtr(value), value);
   }
 
   public LongVectorVector getSizes() {
@@ -85,7 +83,7 @@ public class SlidingIndexWindow {
   }
 
   public void step(Index sub_index, boolean remove_oldest) {
-    swigfaissJNI.SlidingIndexWindow_step(
-        swigCPtr, this, Index.getCPtr(sub_index), sub_index, remove_oldest);
+    swigfaissJNI.SlidingIndexWindow_step(swigCPtr, this, Index.getCPtr(sub_index), sub_index, remove_oldest);
   }
+
 }

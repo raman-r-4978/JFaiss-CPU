@@ -54,4 +54,5 @@ public class Repeat {
   public Repeat() {
     this(swigfaissJNI.new_Repeat(), true);
   }
+
 }

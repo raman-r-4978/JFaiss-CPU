@@ -40,25 +40,15 @@ public class IndexHNSW2Level extends IndexHNSW {
   }
 
   public IndexHNSW2Level(Index quantizer, long nlist, int m_pq, int M) {
-    this(
-        swigfaissJNI.new_IndexHNSW2Level__SWIG_1(
-            Index.getCPtr(quantizer), quantizer, nlist, m_pq, M),
-        true);
+    this(swigfaissJNI.new_IndexHNSW2Level__SWIG_1(Index.getCPtr(quantizer), quantizer, nlist, m_pq, M), true);
   }
 
   public void flip_to_ivf() {
     swigfaissJNI.IndexHNSW2Level_flip_to_ivf(swigCPtr, this);
   }
 
-  public void search(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexHNSW2Level_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexHNSW2Level_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
+
 }

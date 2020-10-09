@@ -23,3 +23,4 @@ public class SWIGTYPE_p_p_faiss__Index {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }
+

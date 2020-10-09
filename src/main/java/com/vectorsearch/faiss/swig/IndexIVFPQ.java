@@ -61,8 +61,7 @@ public class IndexIVFPQ extends IndexIVF {
   }
 
   public void setPolysemous_training(PolysemousTraining value) {
-    swigfaissJNI.IndexIVFPQ_polysemous_training_set(
-        swigCPtr, this, PolysemousTraining.getCPtr(value), value);
+    swigfaissJNI.IndexIVFPQ_polysemous_training_set(swigCPtr, this, PolysemousTraining.getCPtr(value), value);
   }
 
   public PolysemousTraining getPolysemous_training() {
@@ -103,8 +102,7 @@ public class IndexIVFPQ extends IndexIVF {
   }
 
   public void setPrecomputed_table(FloatVector value) {
-    swigfaissJNI.IndexIVFPQ_precomputed_table_set(
-        swigCPtr, this, FloatVector.getCPtr(value), value);
+    swigfaissJNI.IndexIVFPQ_precomputed_table_set(swigCPtr, this, FloatVector.getCPtr(value), value);
   }
 
   public FloatVector getPrecomputed_table() {
@@ -112,79 +110,40 @@ public class IndexIVFPQ extends IndexIVF {
     return (cPtr == 0) ? null : new FloatVector(cPtr, false);
   }
 
+  public IndexIVFPQ(Index quantizer, long d, long nlist, long M, long nbits_per_idx, MetricType metric) {
+    this(swigfaissJNI.new_IndexIVFPQ__SWIG_0(Index.getCPtr(quantizer), quantizer, d, nlist, M, nbits_per_idx, metric.swigValue()), true);
+  }
+
   public IndexIVFPQ(Index quantizer, long d, long nlist, long M, long nbits_per_idx) {
-    this(
-        swigfaissJNI.new_IndexIVFPQ__SWIG_0(
-            Index.getCPtr(quantizer), quantizer, d, nlist, M, nbits_per_idx),
-        true);
+    this(swigfaissJNI.new_IndexIVFPQ__SWIG_1(Index.getCPtr(quantizer), quantizer, d, nlist, M, nbits_per_idx), true);
   }
 
   public void add_with_ids(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long xids) {
-    swigfaissJNI.IndexIVFPQ_add_with_ids__SWIG_0(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
+    swigfaissJNI.IndexIVFPQ_add_with_ids__SWIG_0(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
   }
 
   public void add_with_ids(int n, SWIGTYPE_p_float x) {
     swigfaissJNI.IndexIVFPQ_add_with_ids__SWIG_1(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
   }
 
-  public void encode_vectors(
-      int n,
-      SWIGTYPE_p_float x,
-      SWIGTYPE_p_long list_nos,
-      SWIGTYPE_p_unsigned_char codes,
-      boolean include_listnos) {
-    swigfaissJNI.IndexIVFPQ_encode_vectors__SWIG_0(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        SWIGTYPE_p_long.getCPtr(list_nos),
-        SWIGTYPE_p_unsigned_char.getCPtr(codes),
-        include_listnos);
+  public void encode_vectors(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long list_nos, SWIGTYPE_p_unsigned_char codes, boolean include_listnos) {
+    swigfaissJNI.IndexIVFPQ_encode_vectors__SWIG_0(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(list_nos), SWIGTYPE_p_unsigned_char.getCPtr(codes), include_listnos);
   }
 
-  public void encode_vectors(
-      int n, SWIGTYPE_p_float x, SWIGTYPE_p_long list_nos, SWIGTYPE_p_unsigned_char codes) {
-    swigfaissJNI.IndexIVFPQ_encode_vectors__SWIG_1(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        SWIGTYPE_p_long.getCPtr(list_nos),
-        SWIGTYPE_p_unsigned_char.getCPtr(codes));
+  public void encode_vectors(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long list_nos, SWIGTYPE_p_unsigned_char codes) {
+    swigfaissJNI.IndexIVFPQ_encode_vectors__SWIG_1(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(list_nos), SWIGTYPE_p_unsigned_char.getCPtr(codes));
   }
 
   public void sa_decode(int n, SWIGTYPE_p_unsigned_char bytes, SWIGTYPE_p_float x) {
-    swigfaissJNI.IndexIVFPQ_sa_decode(
-        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.IndexIVFPQ_sa_decode(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
   }
 
-  public void add_core_o(
-      int n,
-      SWIGTYPE_p_float x,
-      SWIGTYPE_p_long xids,
-      SWIGTYPE_p_float residuals_2,
-      SWIGTYPE_p_long precomputed_idx) {
-    swigfaissJNI.IndexIVFPQ_add_core_o__SWIG_0(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        SWIGTYPE_p_long.getCPtr(xids),
-        SWIGTYPE_p_float.getCPtr(residuals_2),
-        SWIGTYPE_p_long.getCPtr(precomputed_idx));
+  public void add_core_o(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long xids, SWIGTYPE_p_float residuals_2, SWIGTYPE_p_long precomputed_idx) {
+    swigfaissJNI.IndexIVFPQ_add_core_o__SWIG_0(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids), SWIGTYPE_p_float.getCPtr(residuals_2), SWIGTYPE_p_long.getCPtr(precomputed_idx));
   }
 
-  public void add_core_o(
-      int n, SWIGTYPE_p_float x, SWIGTYPE_p_long xids, SWIGTYPE_p_float residuals_2) {
-    swigfaissJNI.IndexIVFPQ_add_core_o__SWIG_1(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        SWIGTYPE_p_long.getCPtr(xids),
-        SWIGTYPE_p_float.getCPtr(residuals_2));
+  public void add_core_o(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long xids, SWIGTYPE_p_float residuals_2) {
+    swigfaissJNI.IndexIVFPQ_add_core_o__SWIG_1(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids), SWIGTYPE_p_float.getCPtr(residuals_2));
   }
 
   public void train_residual(int n, SWIGTYPE_p_float x) {
@@ -192,61 +151,31 @@ public class IndexIVFPQ extends IndexIVF {
   }
 
   public void train_residual_o(int n, SWIGTYPE_p_float x, SWIGTYPE_p_float residuals_2) {
-    swigfaissJNI.IndexIVFPQ_train_residual_o(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_float.getCPtr(residuals_2));
+    swigfaissJNI.IndexIVFPQ_train_residual_o(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_float.getCPtr(residuals_2));
   }
 
   public void reconstruct_from_offset(int list_no, int offset, SWIGTYPE_p_float recons) {
-    swigfaissJNI.IndexIVFPQ_reconstruct_from_offset(
-        swigCPtr, this, list_no, offset, SWIGTYPE_p_float.getCPtr(recons));
+    swigfaissJNI.IndexIVFPQ_reconstruct_from_offset(swigCPtr, this, list_no, offset, SWIGTYPE_p_float.getCPtr(recons));
   }
 
   public long find_duplicates(SWIGTYPE_p_long ids, SWIGTYPE_p_long lims) {
-    return swigfaissJNI.IndexIVFPQ_find_duplicates(
-        swigCPtr, this, SWIGTYPE_p_long.getCPtr(ids), SWIGTYPE_p_long.getCPtr(lims));
+    return swigfaissJNI.IndexIVFPQ_find_duplicates(swigCPtr, this, SWIGTYPE_p_long.getCPtr(ids), SWIGTYPE_p_long.getCPtr(lims));
   }
 
   public void encode(int key, SWIGTYPE_p_float x, SWIGTYPE_p_unsigned_char code) {
-    swigfaissJNI.IndexIVFPQ_encode(
-        swigCPtr, this, key, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(code));
+    swigfaissJNI.IndexIVFPQ_encode(swigCPtr, this, key, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
-  public void encode_multiple(
-      long n,
-      SWIGTYPE_p_long keys,
-      SWIGTYPE_p_float x,
-      SWIGTYPE_p_unsigned_char codes,
-      boolean compute_keys) {
-    swigfaissJNI.IndexIVFPQ_encode_multiple__SWIG_0(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_long.getCPtr(keys),
-        SWIGTYPE_p_float.getCPtr(x),
-        SWIGTYPE_p_unsigned_char.getCPtr(codes),
-        compute_keys);
+  public void encode_multiple(long n, SWIGTYPE_p_long keys, SWIGTYPE_p_float x, SWIGTYPE_p_unsigned_char codes, boolean compute_keys) {
+    swigfaissJNI.IndexIVFPQ_encode_multiple__SWIG_0(swigCPtr, this, n, SWIGTYPE_p_long.getCPtr(keys), SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(codes), compute_keys);
   }
 
-  public void encode_multiple(
-      long n, SWIGTYPE_p_long keys, SWIGTYPE_p_float x, SWIGTYPE_p_unsigned_char codes) {
-    swigfaissJNI.IndexIVFPQ_encode_multiple__SWIG_1(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_long.getCPtr(keys),
-        SWIGTYPE_p_float.getCPtr(x),
-        SWIGTYPE_p_unsigned_char.getCPtr(codes));
+  public void encode_multiple(long n, SWIGTYPE_p_long keys, SWIGTYPE_p_float x, SWIGTYPE_p_unsigned_char codes) {
+    swigfaissJNI.IndexIVFPQ_encode_multiple__SWIG_1(swigCPtr, this, n, SWIGTYPE_p_long.getCPtr(keys), SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(codes));
   }
 
-  public void decode_multiple(
-      long n, SWIGTYPE_p_long keys, SWIGTYPE_p_unsigned_char xcodes, SWIGTYPE_p_float x) {
-    swigfaissJNI.IndexIVFPQ_decode_multiple(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_long.getCPtr(keys),
-        SWIGTYPE_p_unsigned_char.getCPtr(xcodes),
-        SWIGTYPE_p_float.getCPtr(x));
+  public void decode_multiple(long n, SWIGTYPE_p_long keys, SWIGTYPE_p_unsigned_char xcodes, SWIGTYPE_p_float x) {
+    swigfaissJNI.IndexIVFPQ_decode_multiple(swigCPtr, this, n, SWIGTYPE_p_long.getCPtr(keys), SWIGTYPE_p_unsigned_char.getCPtr(xcodes), SWIGTYPE_p_float.getCPtr(x));
   }
 
   public SWIGTYPE_p_faiss__InvertedListScanner get_InvertedListScanner(boolean store_pairs) {
@@ -259,6 +188,7 @@ public class IndexIVFPQ extends IndexIVF {
   }
 
   public IndexIVFPQ() {
-    this(swigfaissJNI.new_IndexIVFPQ__SWIG_1(), true);
+    this(swigfaissJNI.new_IndexIVFPQ__SWIG_2(), true);
   }
+
 }

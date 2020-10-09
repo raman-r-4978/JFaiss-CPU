@@ -89,4 +89,5 @@ public class RangeSearchResult {
   public void do_allocation() {
     swigfaissJNI.RangeSearchResult_do_allocation(swigCPtr, this);
   }
+
 }

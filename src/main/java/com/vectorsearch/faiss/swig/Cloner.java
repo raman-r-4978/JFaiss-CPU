@@ -36,9 +36,7 @@ public class Cloner {
   }
 
   public VectorTransform clone_VectorTransform(VectorTransform arg0) {
-    long cPtr =
-        swigfaissJNI.Cloner_clone_VectorTransform(
-            swigCPtr, this, VectorTransform.getCPtr(arg0), arg0);
+    long cPtr = swigfaissJNI.Cloner_clone_VectorTransform(swigCPtr, this, VectorTransform.getCPtr(arg0), arg0);
     return (cPtr == 0) ? null : new VectorTransform(cPtr, true);
   }
 
@@ -55,4 +53,5 @@ public class Cloner {
   public Cloner() {
     this(swigfaissJNI.new_Cloner(), true);
   }
+
 }

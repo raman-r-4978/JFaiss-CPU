@@ -55,4 +55,5 @@ public class VectorIOReader extends IOReader {
   public VectorIOReader() {
     this(swigfaissJNI.new_VectorIOReader(), true);
   }
+
 }

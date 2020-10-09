@@ -36,13 +36,11 @@ public class IndexBinaryIDMap2 extends IndexBinaryIDMap {
   }
 
   public void setRev_map(SWIGTYPE_p_std__unordered_mapT_long_long_t value) {
-    swigfaissJNI.IndexBinaryIDMap2_rev_map_set(
-        swigCPtr, this, SWIGTYPE_p_std__unordered_mapT_long_long_t.getCPtr(value));
+    swigfaissJNI.IndexBinaryIDMap2_rev_map_set(swigCPtr, this, SWIGTYPE_p_std__unordered_mapT_long_long_t.getCPtr(value));
   }
 
   public SWIGTYPE_p_std__unordered_mapT_long_long_t getRev_map() {
-    return new SWIGTYPE_p_std__unordered_mapT_long_long_t(
-        swigfaissJNI.IndexBinaryIDMap2_rev_map_get(swigCPtr, this), true);
+    return new SWIGTYPE_p_std__unordered_mapT_long_long_t(swigfaissJNI.IndexBinaryIDMap2_rev_map_get(swigCPtr, this), true);
   }
 
   public IndexBinaryIDMap2(IndexBinary index) {
@@ -54,8 +52,7 @@ public class IndexBinaryIDMap2 extends IndexBinaryIDMap {
   }
 
   public void add_with_ids(int n, SWIGTYPE_p_unsigned_char x, SWIGTYPE_p_long xids) {
-    swigfaissJNI.IndexBinaryIDMap2_add_with_ids(
-        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
+    swigfaissJNI.IndexBinaryIDMap2_add_with_ids(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
   }
 
   public long remove_ids(IDSelector sel) {
@@ -63,11 +60,11 @@ public class IndexBinaryIDMap2 extends IndexBinaryIDMap {
   }
 
   public void reconstruct(int key, SWIGTYPE_p_unsigned_char recons) {
-    swigfaissJNI.IndexBinaryIDMap2_reconstruct(
-        swigCPtr, this, key, SWIGTYPE_p_unsigned_char.getCPtr(recons));
+    swigfaissJNI.IndexBinaryIDMap2_reconstruct(swigCPtr, this, key, SWIGTYPE_p_unsigned_char.getCPtr(recons));
   }
 
   public IndexBinaryIDMap2() {
     this(swigfaissJNI.new_IndexBinaryIDMap2__SWIG_1(), true);
   }
+
 }

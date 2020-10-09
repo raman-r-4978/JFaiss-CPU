@@ -72,21 +72,16 @@ public class IndexBinaryFlat extends IndexBinary {
     swigfaissJNI.IndexBinaryFlat_reset(swigCPtr, this);
   }
 
-  public void search(
-      int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexBinaryFlat_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_unsigned_char.getCPtr(x),
-        k,
-        SWIGTYPE_p_int.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexBinaryFlat_search(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), k, SWIGTYPE_p_int.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
+  }
+
+  public void range_search(int n, SWIGTYPE_p_unsigned_char x, int radius, RangeSearchResult result) {
+    swigfaissJNI.IndexBinaryFlat_range_search(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), radius, RangeSearchResult.getCPtr(result), result);
   }
 
   public void reconstruct(int key, SWIGTYPE_p_unsigned_char recons) {
-    swigfaissJNI.IndexBinaryFlat_reconstruct(
-        swigCPtr, this, key, SWIGTYPE_p_unsigned_char.getCPtr(recons));
+    swigfaissJNI.IndexBinaryFlat_reconstruct(swigCPtr, this, key, SWIGTYPE_p_unsigned_char.getCPtr(recons));
   }
 
   public long remove_ids(IDSelector sel) {
@@ -96,4 +91,5 @@ public class IndexBinaryFlat extends IndexBinary {
   public IndexBinaryFlat() {
     this(swigfaissJNI.new_IndexBinaryFlat__SWIG_1(), true);
   }
+
 }

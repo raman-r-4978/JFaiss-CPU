@@ -45,9 +45,7 @@ public class RemapDimensionsTransform extends VectorTransform {
   }
 
   public RemapDimensionsTransform(int d_in, int d_out, SWIGTYPE_p_int map) {
-    this(
-        swigfaissJNI.new_RemapDimensionsTransform__SWIG_0(d_in, d_out, SWIGTYPE_p_int.getCPtr(map)),
-        true);
+    this(swigfaissJNI.new_RemapDimensionsTransform__SWIG_0(d_in, d_out, SWIGTYPE_p_int.getCPtr(map)), true);
   }
 
   public RemapDimensionsTransform(int d_in, int d_out, boolean uniform) {
@@ -59,16 +57,15 @@ public class RemapDimensionsTransform extends VectorTransform {
   }
 
   public void apply_noalloc(int n, SWIGTYPE_p_float x, SWIGTYPE_p_float xt) {
-    swigfaissJNI.RemapDimensionsTransform_apply_noalloc(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_float.getCPtr(xt));
+    swigfaissJNI.RemapDimensionsTransform_apply_noalloc(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_float.getCPtr(xt));
   }
 
   public void reverse_transform(int n, SWIGTYPE_p_float xt, SWIGTYPE_p_float x) {
-    swigfaissJNI.RemapDimensionsTransform_reverse_transform(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(xt), SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.RemapDimensionsTransform_reverse_transform(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(xt), SWIGTYPE_p_float.getCPtr(x));
   }
 
   public RemapDimensionsTransform() {
     this(swigfaissJNI.new_RemapDimensionsTransform__SWIG_3(), true);
   }
+
 }

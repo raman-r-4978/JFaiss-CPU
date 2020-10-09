@@ -60,43 +60,20 @@ public class IndexFlat extends Index {
     swigfaissJNI.IndexFlat_reset(swigCPtr, this);
   }
 
-  public void search(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexFlat_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexFlat_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void range_search(int n, SWIGTYPE_p_float x, float radius, RangeSearchResult result) {
-    swigfaissJNI.IndexFlat_range_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        radius,
-        RangeSearchResult.getCPtr(result),
-        result);
+    swigfaissJNI.IndexFlat_range_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), radius, RangeSearchResult.getCPtr(result), result);
   }
 
   public void reconstruct(int key, SWIGTYPE_p_float recons) {
     swigfaissJNI.IndexFlat_reconstruct(swigCPtr, this, key, SWIGTYPE_p_float.getCPtr(recons));
   }
 
-  public void compute_distance_subset(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexFlat_compute_distance_subset(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void compute_distance_subset(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexFlat_compute_distance_subset(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public long remove_ids(IDSelector sel) {
@@ -117,12 +94,11 @@ public class IndexFlat extends Index {
   }
 
   public void sa_encode(int n, SWIGTYPE_p_float x, SWIGTYPE_p_unsigned_char bytes) {
-    swigfaissJNI.IndexFlat_sa_encode(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
+    swigfaissJNI.IndexFlat_sa_encode(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
   }
 
   public void sa_decode(int n, SWIGTYPE_p_unsigned_char bytes, SWIGTYPE_p_float x) {
-    swigfaissJNI.IndexFlat_sa_decode(
-        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.IndexFlat_sa_decode(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
   }
+
 }

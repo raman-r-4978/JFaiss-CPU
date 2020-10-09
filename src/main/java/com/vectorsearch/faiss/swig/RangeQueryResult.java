@@ -52,8 +52,7 @@ public class RangeQueryResult {
   }
 
   public void setPres(RangeSearchPartialResult value) {
-    swigfaissJNI.RangeQueryResult_pres_set(
-        swigCPtr, this, RangeSearchPartialResult.getCPtr(value), value);
+    swigfaissJNI.RangeQueryResult_pres_set(swigCPtr, this, RangeSearchPartialResult.getCPtr(value), value);
   }
 
   public RangeSearchPartialResult getPres() {
@@ -68,4 +67,5 @@ public class RangeQueryResult {
   public RangeQueryResult() {
     this(swigfaissJNI.new_RangeQueryResult(), true);
   }
+
 }

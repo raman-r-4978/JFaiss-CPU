@@ -42,4 +42,5 @@ public class IndexFlatIP extends IndexFlat {
   public IndexFlatIP() {
     this(swigfaissJNI.new_IndexFlatIP__SWIG_1(), true);
   }
+
 }

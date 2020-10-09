@@ -73,16 +73,8 @@ public class IndexPQ extends Index {
     swigfaissJNI.IndexPQ_add(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexPQ_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexPQ_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void reset() {
@@ -106,13 +98,11 @@ public class IndexPQ extends Index {
   }
 
   public void sa_encode(int n, SWIGTYPE_p_float x, SWIGTYPE_p_unsigned_char bytes) {
-    swigfaissJNI.IndexPQ_sa_encode(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
+    swigfaissJNI.IndexPQ_sa_encode(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
   }
 
   public void sa_decode(int n, SWIGTYPE_p_unsigned_char bytes, SWIGTYPE_p_float x) {
-    swigfaissJNI.IndexPQ_sa_decode(
-        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.IndexPQ_sa_decode(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
   }
 
   public DistanceComputer get_distance_computer() {
@@ -129,8 +119,7 @@ public class IndexPQ extends Index {
   }
 
   public void setPolysemous_training(PolysemousTraining value) {
-    swigfaissJNI.IndexPQ_polysemous_training_set(
-        swigCPtr, this, PolysemousTraining.getCPtr(value), value);
+    swigfaissJNI.IndexPQ_polysemous_training_set(swigCPtr, this, PolysemousTraining.getCPtr(value), value);
   }
 
   public PolysemousTraining getPolysemous_training() {
@@ -138,12 +127,12 @@ public class IndexPQ extends Index {
     return (cPtr == 0) ? null : new PolysemousTraining(cPtr, false);
   }
 
-  public void setSearch_type(Search_type_t value) {
+  public void setSearch_type(IndexPQ.Search_type_t value) {
     swigfaissJNI.IndexPQ_search_type_set(swigCPtr, this, value.swigValue());
   }
 
-  public Search_type_t getSearch_type() {
-    return Search_type_t.swigToEnum(swigfaissJNI.IndexPQ_search_type_get(swigCPtr, this));
+  public IndexPQ.Search_type_t getSearch_type() {
+    return IndexPQ.Search_type_t.swigToEnum(swigfaissJNI.IndexPQ_search_type_get(swigCPtr, this));
   }
 
   public void setEncode_signs(boolean value) {
@@ -162,45 +151,25 @@ public class IndexPQ extends Index {
     return swigfaissJNI.IndexPQ_polysemous_ht_get(swigCPtr, this);
   }
 
-  public void search_core_polysemous(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexPQ_search_core_polysemous(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search_core_polysemous(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexPQ_search_core_polysemous(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
-  public void hamming_distance_histogram(
-      int n, SWIGTYPE_p_float x, int nb, SWIGTYPE_p_float xb, SWIGTYPE_p_long dist_histogram) {
-    swigfaissJNI.IndexPQ_hamming_distance_histogram(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        nb,
-        SWIGTYPE_p_float.getCPtr(xb),
-        SWIGTYPE_p_long.getCPtr(dist_histogram));
+  public void hamming_distance_histogram(int n, SWIGTYPE_p_float x, int nb, SWIGTYPE_p_float xb, SWIGTYPE_p_long dist_histogram) {
+    swigfaissJNI.IndexPQ_hamming_distance_histogram(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), nb, SWIGTYPE_p_float.getCPtr(xb), SWIGTYPE_p_long.getCPtr(dist_histogram));
   }
 
   public void hamming_distance_table(int n, SWIGTYPE_p_float x, SWIGTYPE_p_int dis) {
-    swigfaissJNI.IndexPQ_hamming_distance_table(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_int.getCPtr(dis));
+    swigfaissJNI.IndexPQ_hamming_distance_table(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_int.getCPtr(dis));
   }
 
-  public static final class Search_type_t {
-    public static final Search_type_t ST_PQ = new Search_type_t("ST_PQ");
-    public static final Search_type_t ST_HE = new Search_type_t("ST_HE");
-    public static final Search_type_t ST_generalized_HE =
-        new Search_type_t("ST_generalized_HE");
-    public static final Search_type_t ST_SDC = new Search_type_t("ST_SDC");
-    public static final Search_type_t ST_polysemous =
-        new Search_type_t("ST_polysemous");
-    public static final Search_type_t ST_polysemous_generalize =
-        new Search_type_t("ST_polysemous_generalize");
+  public final static class Search_type_t {
+    public final static IndexPQ.Search_type_t ST_PQ = new IndexPQ.Search_type_t("ST_PQ");
+    public final static IndexPQ.Search_type_t ST_HE = new IndexPQ.Search_type_t("ST_HE");
+    public final static IndexPQ.Search_type_t ST_generalized_HE = new IndexPQ.Search_type_t("ST_generalized_HE");
+    public final static IndexPQ.Search_type_t ST_SDC = new IndexPQ.Search_type_t("ST_SDC");
+    public final static IndexPQ.Search_type_t ST_polysemous = new IndexPQ.Search_type_t("ST_polysemous");
+    public final static IndexPQ.Search_type_t ST_polysemous_generalize = new IndexPQ.Search_type_t("ST_polysemous_generalize");
 
     public final int swigValue() {
       return swigValue;
@@ -211,13 +180,12 @@ public class IndexPQ extends Index {
     }
 
     public static Search_type_t swigToEnum(int swigValue) {
-      if (swigValue < swigValues.length
-          && swigValue >= 0
-          && swigValues[swigValue].swigValue == swigValue) return swigValues[swigValue];
+      if (swigValue < swigValues.length && swigValue >= 0 && swigValues[swigValue].swigValue == swigValue)
+        return swigValues[swigValue];
       for (int i = 0; i < swigValues.length; i++)
-        if (swigValues[i].swigValue == swigValue) return swigValues[i];
-      throw new IllegalArgumentException(
-          "No enum " + Search_type_t.class + " with value " + swigValue);
+        if (swigValues[i].swigValue == swigValue)
+          return swigValues[i];
+      throw new IllegalArgumentException("No enum " + Search_type_t.class + " with value " + swigValue);
     }
 
     private Search_type_t(String swigName) {
@@ -228,20 +196,19 @@ public class IndexPQ extends Index {
     private Search_type_t(String swigName, int swigValue) {
       this.swigName = swigName;
       this.swigValue = swigValue;
-      swigNext = swigValue + 1;
+      swigNext = swigValue+1;
     }
 
     private Search_type_t(String swigName, Search_type_t swigEnum) {
       this.swigName = swigName;
       this.swigValue = swigEnum.swigValue;
-      swigNext = this.swigValue + 1;
+      swigNext = this.swigValue+1;
     }
 
-    private static Search_type_t[] swigValues = {
-      ST_PQ, ST_HE, ST_generalized_HE, ST_SDC, ST_polysemous, ST_polysemous_generalize
-    };
+    private static Search_type_t[] swigValues = { ST_PQ, ST_HE, ST_generalized_HE, ST_SDC, ST_polysemous, ST_polysemous_generalize };
     private static int swigNext = 0;
     private final int swigValue;
     private final String swigName;
   }
+
 }

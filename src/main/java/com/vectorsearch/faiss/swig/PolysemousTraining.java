@@ -35,13 +35,12 @@ public class PolysemousTraining extends SimulatedAnnealingParameters {
     super.delete();
   }
 
-  public void setOptimization_type(Optimization_type_t value) {
+  public void setOptimization_type(PolysemousTraining.Optimization_type_t value) {
     swigfaissJNI.PolysemousTraining_optimization_type_set(swigCPtr, this, value.swigValue());
   }
 
-  public Optimization_type_t getOptimization_type() {
-    return Optimization_type_t.swigToEnum(
-        swigfaissJNI.PolysemousTraining_optimization_type_get(swigCPtr, this));
+  public PolysemousTraining.Optimization_type_t getOptimization_type() {
+    return PolysemousTraining.Optimization_type_t.swigToEnum(swigfaissJNI.PolysemousTraining_optimization_type_get(swigCPtr, this));
   }
 
   public void setNtrain_permutation(int value) {
@@ -73,27 +72,21 @@ public class PolysemousTraining extends SimulatedAnnealingParameters {
   }
 
   public void optimize_pq_for_hamming(ProductQuantizer pq, long n, SWIGTYPE_p_float x) {
-    swigfaissJNI.PolysemousTraining_optimize_pq_for_hamming(
-        swigCPtr, this, ProductQuantizer.getCPtr(pq), pq, n, SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.PolysemousTraining_optimize_pq_for_hamming(swigCPtr, this, ProductQuantizer.getCPtr(pq), pq, n, SWIGTYPE_p_float.getCPtr(x));
   }
 
   public void optimize_ranking(ProductQuantizer pq, long n, SWIGTYPE_p_float x) {
-    swigfaissJNI.PolysemousTraining_optimize_ranking(
-        swigCPtr, this, ProductQuantizer.getCPtr(pq), pq, n, SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.PolysemousTraining_optimize_ranking(swigCPtr, this, ProductQuantizer.getCPtr(pq), pq, n, SWIGTYPE_p_float.getCPtr(x));
   }
 
   public void optimize_reproduce_distances(ProductQuantizer pq) {
-    swigfaissJNI.PolysemousTraining_optimize_reproduce_distances(
-        swigCPtr, this, ProductQuantizer.getCPtr(pq), pq);
+    swigfaissJNI.PolysemousTraining_optimize_reproduce_distances(swigCPtr, this, ProductQuantizer.getCPtr(pq), pq);
   }
 
-  public static final class Optimization_type_t {
-    public static final Optimization_type_t OT_None =
-        new Optimization_type_t("OT_None");
-    public static final Optimization_type_t OT_ReproduceDistances_affine =
-        new Optimization_type_t("OT_ReproduceDistances_affine");
-    public static final Optimization_type_t OT_Ranking_weighted_diff =
-        new Optimization_type_t("OT_Ranking_weighted_diff");
+  public final static class Optimization_type_t {
+    public final static PolysemousTraining.Optimization_type_t OT_None = new PolysemousTraining.Optimization_type_t("OT_None");
+    public final static PolysemousTraining.Optimization_type_t OT_ReproduceDistances_affine = new PolysemousTraining.Optimization_type_t("OT_ReproduceDistances_affine");
+    public final static PolysemousTraining.Optimization_type_t OT_Ranking_weighted_diff = new PolysemousTraining.Optimization_type_t("OT_Ranking_weighted_diff");
 
     public final int swigValue() {
       return swigValue;
@@ -104,13 +97,12 @@ public class PolysemousTraining extends SimulatedAnnealingParameters {
     }
 
     public static Optimization_type_t swigToEnum(int swigValue) {
-      if (swigValue < swigValues.length
-          && swigValue >= 0
-          && swigValues[swigValue].swigValue == swigValue) return swigValues[swigValue];
+      if (swigValue < swigValues.length && swigValue >= 0 && swigValues[swigValue].swigValue == swigValue)
+        return swigValues[swigValue];
       for (int i = 0; i < swigValues.length; i++)
-        if (swigValues[i].swigValue == swigValue) return swigValues[i];
-      throw new IllegalArgumentException(
-          "No enum " + Optimization_type_t.class + " with value " + swigValue);
+        if (swigValues[i].swigValue == swigValue)
+          return swigValues[i];
+      throw new IllegalArgumentException("No enum " + Optimization_type_t.class + " with value " + swigValue);
     }
 
     private Optimization_type_t(String swigName) {
@@ -121,20 +113,19 @@ public class PolysemousTraining extends SimulatedAnnealingParameters {
     private Optimization_type_t(String swigName, int swigValue) {
       this.swigName = swigName;
       this.swigValue = swigValue;
-      swigNext = swigValue + 1;
+      swigNext = swigValue+1;
     }
 
     private Optimization_type_t(String swigName, Optimization_type_t swigEnum) {
       this.swigName = swigName;
       this.swigValue = swigEnum.swigValue;
-      swigNext = this.swigValue + 1;
+      swigNext = this.swigValue+1;
     }
 
-    private static Optimization_type_t[] swigValues = {
-      OT_None, OT_ReproduceDistances_affine, OT_Ranking_weighted_diff
-    };
+    private static Optimization_type_t[] swigValues = { OT_None, OT_ReproduceDistances_affine, OT_Ranking_weighted_diff };
     private static int swigNext = 0;
     private final int swigValue;
     private final String swigName;
   }
+
 }

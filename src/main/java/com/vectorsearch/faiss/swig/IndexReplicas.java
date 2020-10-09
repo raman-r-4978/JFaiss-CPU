@@ -67,19 +67,12 @@ public class IndexReplicas extends ThreadedIndexBase {
     swigfaissJNI.IndexReplicas_add(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexReplicas_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexReplicas_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void reconstruct(int arg0, SWIGTYPE_p_float v) {
     swigfaissJNI.IndexReplicas_reconstruct(swigCPtr, this, arg0, SWIGTYPE_p_float.getCPtr(v));
   }
+
 }

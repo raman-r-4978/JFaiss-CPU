@@ -65,7 +65,7 @@ public class OperatingPointVector {
   }
 
   public void swap(OperatingPointVector other) {
-    swigfaissJNI.OperatingPointVector_swap(
-        swigCPtr, this, OperatingPointVector.getCPtr(other), other);
+    swigfaissJNI.OperatingPointVector_swap(swigCPtr, this, OperatingPointVector.getCPtr(other), other);
   }
+
 }

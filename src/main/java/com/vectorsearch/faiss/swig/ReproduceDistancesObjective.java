@@ -52,8 +52,7 @@ public class ReproduceDistancesObjective extends PermutationObjective {
   }
 
   public void setSource_dis(DoubleVector value) {
-    swigfaissJNI.ReproduceDistancesObjective_source_dis_set(
-        swigCPtr, this, DoubleVector.getCPtr(value), value);
+    swigfaissJNI.ReproduceDistancesObjective_source_dis_set(swigCPtr, this, DoubleVector.getCPtr(value), value);
   }
 
   public DoubleVector getSource_dis() {
@@ -62,8 +61,7 @@ public class ReproduceDistancesObjective extends PermutationObjective {
   }
 
   public void setTarget_dis(SWIGTYPE_p_double value) {
-    swigfaissJNI.ReproduceDistancesObjective_target_dis_set(
-        swigCPtr, this, SWIGTYPE_p_double.getCPtr(value));
+    swigfaissJNI.ReproduceDistancesObjective_target_dis_set(swigCPtr, this, SWIGTYPE_p_double.getCPtr(value));
   }
 
   public SWIGTYPE_p_double getTarget_dis() {
@@ -72,8 +70,7 @@ public class ReproduceDistancesObjective extends PermutationObjective {
   }
 
   public void setWeights(DoubleVector value) {
-    swigfaissJNI.ReproduceDistancesObjective_weights_set(
-        swigCPtr, this, DoubleVector.getCPtr(value), value);
+    swigfaissJNI.ReproduceDistancesObjective_weights_set(swigCPtr, this, DoubleVector.getCPtr(value), value);
   }
 
   public DoubleVector getWeights() {
@@ -86,40 +83,23 @@ public class ReproduceDistancesObjective extends PermutationObjective {
   }
 
   public double compute_cost(SWIGTYPE_p_int perm) {
-    return swigfaissJNI.ReproduceDistancesObjective_compute_cost(
-        swigCPtr, this, SWIGTYPE_p_int.getCPtr(perm));
+    return swigfaissJNI.ReproduceDistancesObjective_compute_cost(swigCPtr, this, SWIGTYPE_p_int.getCPtr(perm));
   }
 
   public double cost_update(SWIGTYPE_p_int perm, int iw, int jw) {
-    return swigfaissJNI.ReproduceDistancesObjective_cost_update(
-        swigCPtr, this, SWIGTYPE_p_int.getCPtr(perm), iw, jw);
+    return swigfaissJNI.ReproduceDistancesObjective_cost_update(swigCPtr, this, SWIGTYPE_p_int.getCPtr(perm), iw, jw);
   }
 
-  public ReproduceDistancesObjective(
-      int n,
-      SWIGTYPE_p_double source_dis_in,
-      SWIGTYPE_p_double target_dis_in,
-      double dis_weight_factor) {
-    this(
-        swigfaissJNI.new_ReproduceDistancesObjective(
-            n,
-            SWIGTYPE_p_double.getCPtr(source_dis_in),
-            SWIGTYPE_p_double.getCPtr(target_dis_in),
-            dis_weight_factor),
-        true);
+  public ReproduceDistancesObjective(int n, SWIGTYPE_p_double source_dis_in, SWIGTYPE_p_double target_dis_in, double dis_weight_factor) {
+    this(swigfaissJNI.new_ReproduceDistancesObjective(n, SWIGTYPE_p_double.getCPtr(source_dis_in), SWIGTYPE_p_double.getCPtr(target_dis_in), dis_weight_factor), true);
   }
 
-  public static void compute_mean_stdev(
-      SWIGTYPE_p_double tab, long n2, SWIGTYPE_p_double mean_out, SWIGTYPE_p_double stddev_out) {
-    swigfaissJNI.ReproduceDistancesObjective_compute_mean_stdev(
-        SWIGTYPE_p_double.getCPtr(tab),
-        n2,
-        SWIGTYPE_p_double.getCPtr(mean_out),
-        SWIGTYPE_p_double.getCPtr(stddev_out));
+  public static void compute_mean_stdev(SWIGTYPE_p_double tab, long n2, SWIGTYPE_p_double mean_out, SWIGTYPE_p_double stddev_out) {
+    swigfaissJNI.ReproduceDistancesObjective_compute_mean_stdev(SWIGTYPE_p_double.getCPtr(tab), n2, SWIGTYPE_p_double.getCPtr(mean_out), SWIGTYPE_p_double.getCPtr(stddev_out));
   }
 
   public void set_affine_target_dis(SWIGTYPE_p_double source_dis_in) {
-    swigfaissJNI.ReproduceDistancesObjective_set_affine_target_dis(
-        swigCPtr, this, SWIGTYPE_p_double.getCPtr(source_dis_in));
+    swigfaissJNI.ReproduceDistancesObjective_set_affine_target_dis(swigCPtr, this, SWIGTYPE_p_double.getCPtr(source_dis_in));
   }
+
 }

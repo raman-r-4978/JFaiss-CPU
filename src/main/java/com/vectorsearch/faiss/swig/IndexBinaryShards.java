@@ -72,20 +72,11 @@ public class IndexBinaryShards extends ThreadedIndexBaseBinary {
   }
 
   public void add_with_ids(int n, SWIGTYPE_p_unsigned_char x, SWIGTYPE_p_long xids) {
-    swigfaissJNI.IndexBinaryShards_add_with_ids(
-        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
+    swigfaissJNI.IndexBinaryShards_add_with_ids(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexBinaryShards_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_unsigned_char.getCPtr(x),
-        k,
-        SWIGTYPE_p_int.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexBinaryShards_search(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), k, SWIGTYPE_p_int.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void train(int n, SWIGTYPE_p_unsigned_char x) {
@@ -103,4 +94,5 @@ public class IndexBinaryShards extends ThreadedIndexBaseBinary {
   public boolean getSuccessive_ids() {
     return swigfaissJNI.IndexBinaryShards_successive_ids_get(swigCPtr, this);
   }
+
 }

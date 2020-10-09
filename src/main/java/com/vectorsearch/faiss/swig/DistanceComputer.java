@@ -42,4 +42,5 @@ public class DistanceComputer {
   public float symmetric_dis(int i, int j) {
     return swigfaissJNI.DistanceComputer_symmetric_dis(swigCPtr, this, i, j);
   }
+
 }

@@ -62,9 +62,7 @@ public class IndexScalarQuantizer extends Index {
   }
 
   public IndexScalarQuantizer(int d, ScalarQuantizer.QuantizerType qtype, MetricType metric) {
-    this(
-        swigfaissJNI.new_IndexScalarQuantizer__SWIG_0(d, qtype.swigValue(), metric.swigValue()),
-        true);
+    this(swigfaissJNI.new_IndexScalarQuantizer__SWIG_0(d, qtype.swigValue(), metric.swigValue()), true);
   }
 
   public IndexScalarQuantizer(int d, ScalarQuantizer.QuantizerType qtype) {
@@ -83,16 +81,8 @@ public class IndexScalarQuantizer extends Index {
     swigfaissJNI.IndexScalarQuantizer_add(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexScalarQuantizer_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexScalarQuantizer_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void reset() {
@@ -100,13 +90,11 @@ public class IndexScalarQuantizer extends Index {
   }
 
   public void reconstruct_n(int i0, int ni, SWIGTYPE_p_float recons) {
-    swigfaissJNI.IndexScalarQuantizer_reconstruct_n(
-        swigCPtr, this, i0, ni, SWIGTYPE_p_float.getCPtr(recons));
+    swigfaissJNI.IndexScalarQuantizer_reconstruct_n(swigCPtr, this, i0, ni, SWIGTYPE_p_float.getCPtr(recons));
   }
 
   public void reconstruct(int key, SWIGTYPE_p_float recons) {
-    swigfaissJNI.IndexScalarQuantizer_reconstruct(
-        swigCPtr, this, key, SWIGTYPE_p_float.getCPtr(recons));
+    swigfaissJNI.IndexScalarQuantizer_reconstruct(swigCPtr, this, key, SWIGTYPE_p_float.getCPtr(recons));
   }
 
   public DistanceComputer get_distance_computer() {
@@ -119,12 +107,11 @@ public class IndexScalarQuantizer extends Index {
   }
 
   public void sa_encode(int n, SWIGTYPE_p_float x, SWIGTYPE_p_unsigned_char bytes) {
-    swigfaissJNI.IndexScalarQuantizer_sa_encode(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
+    swigfaissJNI.IndexScalarQuantizer_sa_encode(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
   }
 
   public void sa_decode(int n, SWIGTYPE_p_unsigned_char bytes, SWIGTYPE_p_float x) {
-    swigfaissJNI.IndexScalarQuantizer_sa_decode(
-        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.IndexScalarQuantizer_sa_decode(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
   }
+
 }

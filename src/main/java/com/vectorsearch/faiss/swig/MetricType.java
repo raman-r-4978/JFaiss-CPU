@@ -9,17 +9,14 @@
 package com.vectorsearch.faiss.swig;
 
 public final class MetricType {
-  public static final MetricType METRIC_INNER_PRODUCT =
-      new MetricType("METRIC_INNER_PRODUCT", swigfaissJNI.METRIC_INNER_PRODUCT_get());
-  public static final MetricType METRIC_L2 =
-      new MetricType("METRIC_L2", swigfaissJNI.METRIC_L2_get());
-  public static final MetricType METRIC_L1 = new MetricType("METRIC_L1");
-  public static final MetricType METRIC_Linf = new MetricType("METRIC_Linf");
-  public static final MetricType METRIC_Lp = new MetricType("METRIC_Lp");
-  public static final MetricType METRIC_Canberra =
-      new MetricType("METRIC_Canberra", swigfaissJNI.METRIC_Canberra_get());
-  public static final MetricType METRIC_BrayCurtis = new MetricType("METRIC_BrayCurtis");
-  public static final MetricType METRIC_JensenShannon = new MetricType("METRIC_JensenShannon");
+  public final static MetricType METRIC_INNER_PRODUCT = new MetricType("METRIC_INNER_PRODUCT", swigfaissJNI.METRIC_INNER_PRODUCT_get());
+  public final static MetricType METRIC_L2 = new MetricType("METRIC_L2", swigfaissJNI.METRIC_L2_get());
+  public final static MetricType METRIC_L1 = new MetricType("METRIC_L1");
+  public final static MetricType METRIC_Linf = new MetricType("METRIC_Linf");
+  public final static MetricType METRIC_Lp = new MetricType("METRIC_Lp");
+  public final static MetricType METRIC_Canberra = new MetricType("METRIC_Canberra", swigfaissJNI.METRIC_Canberra_get());
+  public final static MetricType METRIC_BrayCurtis = new MetricType("METRIC_BrayCurtis");
+  public final static MetricType METRIC_JensenShannon = new MetricType("METRIC_JensenShannon");
 
   public final int swigValue() {
     return swigValue;
@@ -30,11 +27,11 @@ public final class MetricType {
   }
 
   public static MetricType swigToEnum(int swigValue) {
-    if (swigValue < swigValues.length
-        && swigValue >= 0
-        && swigValues[swigValue].swigValue == swigValue) return swigValues[swigValue];
+    if (swigValue < swigValues.length && swigValue >= 0 && swigValues[swigValue].swigValue == swigValue)
+      return swigValues[swigValue];
     for (int i = 0; i < swigValues.length; i++)
-      if (swigValues[i].swigValue == swigValue) return swigValues[i];
+      if (swigValues[i].swigValue == swigValue)
+        return swigValues[i];
     throw new IllegalArgumentException("No enum " + MetricType.class + " with value " + swigValue);
   }
 
@@ -46,26 +43,18 @@ public final class MetricType {
   private MetricType(String swigName, int swigValue) {
     this.swigName = swigName;
     this.swigValue = swigValue;
-    swigNext = swigValue + 1;
+    swigNext = swigValue+1;
   }
 
   private MetricType(String swigName, MetricType swigEnum) {
     this.swigName = swigName;
     this.swigValue = swigEnum.swigValue;
-    swigNext = this.swigValue + 1;
+    swigNext = this.swigValue+1;
   }
 
-  private static MetricType[] swigValues = {
-    METRIC_INNER_PRODUCT,
-    METRIC_L2,
-    METRIC_L1,
-    METRIC_Linf,
-    METRIC_Lp,
-    METRIC_Canberra,
-    METRIC_BrayCurtis,
-    METRIC_JensenShannon
-  };
+  private static MetricType[] swigValues = { METRIC_INNER_PRODUCT, METRIC_L2, METRIC_L1, METRIC_Linf, METRIC_Lp, METRIC_Canberra, METRIC_BrayCurtis, METRIC_JensenShannon };
   private static int swigNext = 0;
   private final int swigValue;
   private final String swigName;
 }
+

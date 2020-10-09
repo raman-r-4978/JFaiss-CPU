@@ -11,8 +11,7 @@ package com.vectorsearch.faiss.swig;
 public class SWIGTYPE_p_std__functionT_void_fint_faiss__Index_pF_t {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_std__functionT_void_fint_faiss__Index_pF_t(
-      long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_std__functionT_void_fint_faiss__Index_pF_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
@@ -24,3 +23,4 @@ public class SWIGTYPE_p_std__functionT_void_fint_faiss__Index_pF_t {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }
+

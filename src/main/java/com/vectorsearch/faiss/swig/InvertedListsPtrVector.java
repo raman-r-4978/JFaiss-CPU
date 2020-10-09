@@ -40,8 +40,7 @@ public class InvertedListsPtrVector {
   }
 
   public void push_back(InvertedLists arg0) {
-    swigfaissJNI.InvertedListsPtrVector_push_back(
-        swigCPtr, this, InvertedLists.getCPtr(arg0), arg0);
+    swigfaissJNI.InvertedListsPtrVector_push_back(swigCPtr, this, InvertedLists.getCPtr(arg0), arg0);
   }
 
   public void clear() {
@@ -67,7 +66,7 @@ public class InvertedListsPtrVector {
   }
 
   public void swap(InvertedListsPtrVector other) {
-    swigfaissJNI.InvertedListsPtrVector_swap(
-        swigCPtr, this, InvertedListsPtrVector.getCPtr(other), other);
+    swigfaissJNI.InvertedListsPtrVector_swap(swigCPtr, this, InvertedListsPtrVector.getCPtr(other), other);
   }
+
 }

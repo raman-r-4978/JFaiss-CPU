@@ -44,13 +44,11 @@ public class ThreadedIndexBase extends Index {
   }
 
   public void runOnIndex(SWIGTYPE_p_std__functionT_void_fint_faiss__Index_pF_t f) {
-    swigfaissJNI.ThreadedIndexBase_runOnIndex__SWIG_0(
-        swigCPtr, this, SWIGTYPE_p_std__functionT_void_fint_faiss__Index_pF_t.getCPtr(f));
+    swigfaissJNI.ThreadedIndexBase_runOnIndex__SWIG_0(swigCPtr, this, SWIGTYPE_p_std__functionT_void_fint_faiss__Index_pF_t.getCPtr(f));
   }
 
   public void runOnIndex(SWIGTYPE_p_std__functionT_void_fint_faiss__Index_const_pF_t f) {
-    swigfaissJNI.ThreadedIndexBase_runOnIndex__SWIG_1(
-        swigCPtr, this, SWIGTYPE_p_std__functionT_void_fint_faiss__Index_const_pF_t.getCPtr(f));
+    swigfaissJNI.ThreadedIndexBase_runOnIndex__SWIG_1(swigCPtr, this, SWIGTYPE_p_std__functionT_void_fint_faiss__Index_const_pF_t.getCPtr(f));
   }
 
   public void reset() {
@@ -73,4 +71,5 @@ public class ThreadedIndexBase extends Index {
   public boolean getOwn_fields() {
     return swigfaissJNI.ThreadedIndexBase_own_fields_get(swigCPtr, this);
   }
+
 }

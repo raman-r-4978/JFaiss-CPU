@@ -44,8 +44,7 @@ public class ZnSphereCodecAlt extends ZnSphereCodec {
   }
 
   public void setZnc_rec(ZnSphereCodecRec value) {
-    swigfaissJNI.ZnSphereCodecAlt_znc_rec_set(
-        swigCPtr, this, ZnSphereCodecRec.getCPtr(value), value);
+    swigfaissJNI.ZnSphereCodecAlt_znc_rec_set(swigCPtr, this, ZnSphereCodecRec.getCPtr(value), value);
   }
 
   public ZnSphereCodecRec getZnc_rec() {
@@ -64,4 +63,5 @@ public class ZnSphereCodecAlt extends ZnSphereCodec {
   public void decode(long code, SWIGTYPE_p_float c) {
     swigfaissJNI.ZnSphereCodecAlt_decode(swigCPtr, this, code, SWIGTYPE_p_float.getCPtr(c));
   }
+
 }

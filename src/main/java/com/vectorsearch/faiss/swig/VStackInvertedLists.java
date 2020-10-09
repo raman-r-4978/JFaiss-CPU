@@ -36,15 +36,12 @@ public class VStackInvertedLists extends ReadOnlyInvertedLists {
   }
 
   public void setIls(SWIGTYPE_p_std__vectorT_faiss__InvertedLists_const_p_t value) {
-    swigfaissJNI.VStackInvertedLists_ils_set(
-        swigCPtr, this, SWIGTYPE_p_std__vectorT_faiss__InvertedLists_const_p_t.getCPtr(value));
+    swigfaissJNI.VStackInvertedLists_ils_set(swigCPtr, this, SWIGTYPE_p_std__vectorT_faiss__InvertedLists_const_p_t.getCPtr(value));
   }
 
   public SWIGTYPE_p_std__vectorT_faiss__InvertedLists_const_p_t getIls() {
     long cPtr = swigfaissJNI.VStackInvertedLists_ils_get(swigCPtr, this);
-    return (cPtr == 0)
-        ? null
-        : new SWIGTYPE_p_std__vectorT_faiss__InvertedLists_const_p_t(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_std__vectorT_faiss__InvertedLists_const_p_t(cPtr, false);
   }
 
   public void setCumsz(LongVector value) {
@@ -57,9 +54,7 @@ public class VStackInvertedLists extends ReadOnlyInvertedLists {
   }
 
   public VStackInvertedLists(int nil, SWIGTYPE_p_p_faiss__InvertedLists ils) {
-    this(
-        swigfaissJNI.new_VStackInvertedLists(nil, SWIGTYPE_p_p_faiss__InvertedLists.getCPtr(ils)),
-        true);
+    this(swigfaissJNI.new_VStackInvertedLists(nil, SWIGTYPE_p_p_faiss__InvertedLists.getCPtr(ils)), true);
   }
 
   public long list_size(long list_no) {
@@ -77,13 +72,11 @@ public class VStackInvertedLists extends ReadOnlyInvertedLists {
   }
 
   public void release_codes(long list_no, SWIGTYPE_p_unsigned_char codes) {
-    swigfaissJNI.VStackInvertedLists_release_codes(
-        swigCPtr, this, list_no, SWIGTYPE_p_unsigned_char.getCPtr(codes));
+    swigfaissJNI.VStackInvertedLists_release_codes(swigCPtr, this, list_no, SWIGTYPE_p_unsigned_char.getCPtr(codes));
   }
 
   public void release_ids(long list_no, SWIGTYPE_p_long ids) {
-    swigfaissJNI.VStackInvertedLists_release_ids(
-        swigCPtr, this, list_no, SWIGTYPE_p_long.getCPtr(ids));
+    swigfaissJNI.VStackInvertedLists_release_ids(swigCPtr, this, list_no, SWIGTYPE_p_long.getCPtr(ids));
   }
 
   public int get_single_id(long list_no, long offset) {
@@ -96,7 +89,7 @@ public class VStackInvertedLists extends ReadOnlyInvertedLists {
   }
 
   public void prefetch_lists(SWIGTYPE_p_long list_nos, int nlist) {
-    swigfaissJNI.VStackInvertedLists_prefetch_lists(
-        swigCPtr, this, SWIGTYPE_p_long.getCPtr(list_nos), nlist);
+    swigfaissJNI.VStackInvertedLists_prefetch_lists(swigCPtr, this, SWIGTYPE_p_long.getCPtr(list_nos), nlist);
   }
+
 }

@@ -87,16 +87,11 @@ public class Index2Layer extends Index {
   }
 
   public Index2Layer(Index quantizer, long nlist, int M, int nbit, MetricType metric) {
-    this(
-        swigfaissJNI.new_Index2Layer__SWIG_0(
-            Index.getCPtr(quantizer), quantizer, nlist, M, nbit, metric.swigValue()),
-        true);
+    this(swigfaissJNI.new_Index2Layer__SWIG_0(Index.getCPtr(quantizer), quantizer, nlist, M, nbit, metric.swigValue()), true);
   }
 
   public Index2Layer(Index quantizer, long nlist, int M, int nbit) {
-    this(
-        swigfaissJNI.new_Index2Layer__SWIG_1(Index.getCPtr(quantizer), quantizer, nlist, M, nbit),
-        true);
+    this(swigfaissJNI.new_Index2Layer__SWIG_1(Index.getCPtr(quantizer), quantizer, nlist, M, nbit), true);
   }
 
   public Index2Layer(Index quantizer, long nlist, int M) {
@@ -115,21 +110,12 @@ public class Index2Layer extends Index {
     swigfaissJNI.Index2Layer_add(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.Index2Layer_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.Index2Layer_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void reconstruct_n(int i0, int ni, SWIGTYPE_p_float recons) {
-    swigfaissJNI.Index2Layer_reconstruct_n(
-        swigCPtr, this, i0, ni, SWIGTYPE_p_float.getCPtr(recons));
+    swigfaissJNI.Index2Layer_reconstruct_n(swigCPtr, this, i0, ni, SWIGTYPE_p_float.getCPtr(recons));
   }
 
   public void reconstruct(int key, SWIGTYPE_p_float recons) {
@@ -154,12 +140,11 @@ public class Index2Layer extends Index {
   }
 
   public void sa_encode(int n, SWIGTYPE_p_float x, SWIGTYPE_p_unsigned_char bytes) {
-    swigfaissJNI.Index2Layer_sa_encode(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
+    swigfaissJNI.Index2Layer_sa_encode(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
   }
 
   public void sa_decode(int n, SWIGTYPE_p_unsigned_char bytes, SWIGTYPE_p_float x) {
-    swigfaissJNI.Index2Layer_sa_decode(
-        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.Index2Layer_sa_decode(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
   }
+
 }

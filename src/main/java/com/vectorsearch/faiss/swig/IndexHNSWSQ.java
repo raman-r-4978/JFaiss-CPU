@@ -39,7 +39,12 @@ public class IndexHNSWSQ extends IndexHNSW {
     this(swigfaissJNI.new_IndexHNSWSQ__SWIG_0(), true);
   }
 
-  public IndexHNSWSQ(int d, ScalarQuantizer.QuantizerType qtype, int M) {
-    this(swigfaissJNI.new_IndexHNSWSQ__SWIG_1(d, qtype.swigValue(), M), true);
+  public IndexHNSWSQ(int d, ScalarQuantizer.QuantizerType qtype, int M, MetricType metric) {
+    this(swigfaissJNI.new_IndexHNSWSQ__SWIG_1(d, qtype.swigValue(), M, metric.swigValue()), true);
   }
+
+  public IndexHNSWSQ(int d, ScalarQuantizer.QuantizerType qtype, int M) {
+    this(swigfaissJNI.new_IndexHNSWSQ__SWIG_2(d, qtype.swigValue(), M), true);
+  }
+
 }

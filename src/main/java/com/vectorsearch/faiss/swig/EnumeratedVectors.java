@@ -60,30 +60,15 @@ public class EnumeratedVectors {
   }
 
   public void encode_multi(long nc, SWIGTYPE_p_float c, SWIGTYPE_p_unsigned_long codes) {
-    swigfaissJNI.EnumeratedVectors_encode_multi(
-        swigCPtr, this, nc, SWIGTYPE_p_float.getCPtr(c), SWIGTYPE_p_unsigned_long.getCPtr(codes));
+    swigfaissJNI.EnumeratedVectors_encode_multi(swigCPtr, this, nc, SWIGTYPE_p_float.getCPtr(c), SWIGTYPE_p_unsigned_long.getCPtr(codes));
   }
 
   public void decode_multi(long nc, SWIGTYPE_p_unsigned_long codes, SWIGTYPE_p_float c) {
-    swigfaissJNI.EnumeratedVectors_decode_multi(
-        swigCPtr, this, nc, SWIGTYPE_p_unsigned_long.getCPtr(codes), SWIGTYPE_p_float.getCPtr(c));
+    swigfaissJNI.EnumeratedVectors_decode_multi(swigCPtr, this, nc, SWIGTYPE_p_unsigned_long.getCPtr(codes), SWIGTYPE_p_float.getCPtr(c));
   }
 
-  public void find_nn(
-      long n,
-      SWIGTYPE_p_unsigned_long codes,
-      long nq,
-      SWIGTYPE_p_float xq,
-      SWIGTYPE_p_long idx,
-      SWIGTYPE_p_float dis) {
-    swigfaissJNI.EnumeratedVectors_find_nn(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_unsigned_long.getCPtr(codes),
-        nq,
-        SWIGTYPE_p_float.getCPtr(xq),
-        SWIGTYPE_p_long.getCPtr(idx),
-        SWIGTYPE_p_float.getCPtr(dis));
+  public void find_nn(long n, SWIGTYPE_p_unsigned_long codes, long nq, SWIGTYPE_p_float xq, SWIGTYPE_p_long idx, SWIGTYPE_p_float dis) {
+    swigfaissJNI.EnumeratedVectors_find_nn(swigCPtr, this, n, SWIGTYPE_p_unsigned_long.getCPtr(codes), nq, SWIGTYPE_p_float.getCPtr(xq), SWIGTYPE_p_long.getCPtr(idx), SWIGTYPE_p_float.getCPtr(dis));
   }
+
 }

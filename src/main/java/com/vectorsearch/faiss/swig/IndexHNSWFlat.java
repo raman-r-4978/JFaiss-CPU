@@ -39,7 +39,12 @@ public class IndexHNSWFlat extends IndexHNSW {
     this(swigfaissJNI.new_IndexHNSWFlat__SWIG_0(), true);
   }
 
-  public IndexHNSWFlat(int d, int M) {
-    this(swigfaissJNI.new_IndexHNSWFlat__SWIG_1(d, M), true);
+  public IndexHNSWFlat(int d, int M, MetricType metric) {
+    this(swigfaissJNI.new_IndexHNSWFlat__SWIG_1(d, M, metric.swigValue()), true);
   }
+
+  public IndexHNSWFlat(int d, int M) {
+    this(swigfaissJNI.new_IndexHNSWFlat__SWIG_2(d, M), true);
+  }
+
 }

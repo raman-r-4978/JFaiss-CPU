@@ -56,4 +56,5 @@ public class longArray {
     long cPtr = swigfaissJNI.longArray_frompointer(SWIGTYPE_p_long.getCPtr(t));
     return (cPtr == 0) ? null : new longArray(cPtr, false);
   }
+
 }

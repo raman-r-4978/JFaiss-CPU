@@ -107,8 +107,7 @@ public class IndexLSH extends Index {
   }
 
   public SWIGTYPE_p_float apply_preprocess(int n, SWIGTYPE_p_float x) {
-    long cPtr =
-        swigfaissJNI.IndexLSH_apply_preprocess(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
+    long cPtr = swigfaissJNI.IndexLSH_apply_preprocess(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
     return (cPtr == 0) ? null : new SWIGTYPE_p_float(cPtr, false);
   }
 
@@ -120,16 +119,8 @@ public class IndexLSH extends Index {
     swigfaissJNI.IndexLSH_add(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexLSH_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexLSH_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void reset() {
@@ -149,12 +140,11 @@ public class IndexLSH extends Index {
   }
 
   public void sa_encode(int n, SWIGTYPE_p_float x, SWIGTYPE_p_unsigned_char bytes) {
-    swigfaissJNI.IndexLSH_sa_encode(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
+    swigfaissJNI.IndexLSH_sa_encode(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
   }
 
   public void sa_decode(int n, SWIGTYPE_p_unsigned_char bytes, SWIGTYPE_p_float x) {
-    swigfaissJNI.IndexLSH_sa_decode(
-        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.IndexLSH_sa_decode(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
   }
+
 }

@@ -66,4 +66,5 @@ public class IndexPQStats {
   public void reset() {
     swigfaissJNI.IndexPQStats_reset(swigCPtr, this);
   }
+
 }

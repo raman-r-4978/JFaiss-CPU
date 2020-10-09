@@ -72,20 +72,11 @@ public class IndexShards extends ThreadedIndexBase {
   }
 
   public void add_with_ids(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long xids) {
-    swigfaissJNI.IndexShards_add_with_ids(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
+    swigfaissJNI.IndexShards_add_with_ids(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexShards_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexShards_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void train(int n, SWIGTYPE_p_float x) {
@@ -103,4 +94,5 @@ public class IndexShards extends ThreadedIndexBase {
   public boolean getSuccessive_ids() {
     return swigfaissJNI.IndexShards_successive_ids_get(swigCPtr, this);
   }
+
 }

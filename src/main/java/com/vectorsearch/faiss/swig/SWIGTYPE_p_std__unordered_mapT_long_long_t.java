@@ -11,8 +11,7 @@ package com.vectorsearch.faiss.swig;
 public class SWIGTYPE_p_std__unordered_mapT_long_long_t {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_std__unordered_mapT_long_long_t(
-      long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_std__unordered_mapT_long_long_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
@@ -24,3 +23,4 @@ public class SWIGTYPE_p_std__unordered_mapT_long_long_t {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }
+

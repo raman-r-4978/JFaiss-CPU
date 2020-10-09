@@ -27,4 +27,4 @@ RUN make install
 
 # Create source files
 WORKDIR /opt/JFaiss/jni
-RUN make
+ENTRYPOINT [ "make" ]

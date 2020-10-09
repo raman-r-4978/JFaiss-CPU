@@ -78,16 +78,11 @@ public class AutoTuneCriterion {
   }
 
   public void set_groundtruth(int gt_nnn, SWIGTYPE_p_float gt_D_in, SWIGTYPE_p_long gt_I_in) {
-    swigfaissJNI.AutoTuneCriterion_set_groundtruth(
-        swigCPtr,
-        this,
-        gt_nnn,
-        SWIGTYPE_p_float.getCPtr(gt_D_in),
-        SWIGTYPE_p_long.getCPtr(gt_I_in));
+    swigfaissJNI.AutoTuneCriterion_set_groundtruth(swigCPtr, this, gt_nnn, SWIGTYPE_p_float.getCPtr(gt_D_in), SWIGTYPE_p_long.getCPtr(gt_I_in));
   }
 
   public double evaluate(SWIGTYPE_p_float D, SWIGTYPE_p_long I) {
-    return swigfaissJNI.AutoTuneCriterion_evaluate(
-        swigCPtr, this, SWIGTYPE_p_float.getCPtr(D), SWIGTYPE_p_long.getCPtr(I));
+    return swigfaissJNI.AutoTuneCriterion_evaluate(swigCPtr, this, SWIGTYPE_p_float.getCPtr(D), SWIGTYPE_p_long.getCPtr(I));
   }
+
 }

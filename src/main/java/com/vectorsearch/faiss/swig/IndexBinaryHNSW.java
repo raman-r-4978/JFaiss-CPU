@@ -94,24 +94,16 @@ public class IndexBinaryHNSW extends IndexBinary {
     swigfaissJNI.IndexBinaryHNSW_train(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexBinaryHNSW_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_unsigned_char.getCPtr(x),
-        k,
-        SWIGTYPE_p_int.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexBinaryHNSW_search(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), k, SWIGTYPE_p_int.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void reconstruct(int key, SWIGTYPE_p_unsigned_char recons) {
-    swigfaissJNI.IndexBinaryHNSW_reconstruct(
-        swigCPtr, this, key, SWIGTYPE_p_unsigned_char.getCPtr(recons));
+    swigfaissJNI.IndexBinaryHNSW_reconstruct(swigCPtr, this, key, SWIGTYPE_p_unsigned_char.getCPtr(recons));
   }
 
   public void reset() {
     swigfaissJNI.IndexBinaryHNSW_reset(swigCPtr, this);
   }
+
 }

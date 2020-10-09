@@ -54,10 +54,7 @@ public class MaskedInvertedLists extends ReadOnlyInvertedLists {
   }
 
   public MaskedInvertedLists(InvertedLists il0, InvertedLists il1) {
-    this(
-        swigfaissJNI.new_MaskedInvertedLists(
-            InvertedLists.getCPtr(il0), il0, InvertedLists.getCPtr(il1), il1),
-        true);
+    this(swigfaissJNI.new_MaskedInvertedLists(InvertedLists.getCPtr(il0), il0, InvertedLists.getCPtr(il1), il1), true);
   }
 
   public long list_size(long list_no) {
@@ -75,13 +72,11 @@ public class MaskedInvertedLists extends ReadOnlyInvertedLists {
   }
 
   public void release_codes(long list_no, SWIGTYPE_p_unsigned_char codes) {
-    swigfaissJNI.MaskedInvertedLists_release_codes(
-        swigCPtr, this, list_no, SWIGTYPE_p_unsigned_char.getCPtr(codes));
+    swigfaissJNI.MaskedInvertedLists_release_codes(swigCPtr, this, list_no, SWIGTYPE_p_unsigned_char.getCPtr(codes));
   }
 
   public void release_ids(long list_no, SWIGTYPE_p_long ids) {
-    swigfaissJNI.MaskedInvertedLists_release_ids(
-        swigCPtr, this, list_no, SWIGTYPE_p_long.getCPtr(ids));
+    swigfaissJNI.MaskedInvertedLists_release_ids(swigCPtr, this, list_no, SWIGTYPE_p_long.getCPtr(ids));
   }
 
   public int get_single_id(long list_no, long offset) {
@@ -94,7 +89,7 @@ public class MaskedInvertedLists extends ReadOnlyInvertedLists {
   }
 
   public void prefetch_lists(SWIGTYPE_p_long list_nos, int nlist) {
-    swigfaissJNI.MaskedInvertedLists_prefetch_lists(
-        swigCPtr, this, SWIGTYPE_p_long.getCPtr(list_nos), nlist);
+    swigfaissJNI.MaskedInvertedLists_prefetch_lists(swigCPtr, this, SWIGTYPE_p_long.getCPtr(list_nos), nlist);
   }
+
 }

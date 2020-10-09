@@ -44,15 +44,12 @@ public class BufferList {
   }
 
   public void setBuffers(SWIGTYPE_p_std__vectorT_faiss__BufferList__Buffer_t value) {
-    swigfaissJNI.BufferList_buffers_set(
-        swigCPtr, this, SWIGTYPE_p_std__vectorT_faiss__BufferList__Buffer_t.getCPtr(value));
+    swigfaissJNI.BufferList_buffers_set(swigCPtr, this, SWIGTYPE_p_std__vectorT_faiss__BufferList__Buffer_t.getCPtr(value));
   }
 
   public SWIGTYPE_p_std__vectorT_faiss__BufferList__Buffer_t getBuffers() {
     long cPtr = swigfaissJNI.BufferList_buffers_get(swigCPtr, this);
-    return (cPtr == 0)
-        ? null
-        : new SWIGTYPE_p_std__vectorT_faiss__BufferList__Buffer_t(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_std__vectorT_faiss__BufferList__Buffer_t(cPtr, false);
   }
 
   public void setWp(long value) {
@@ -76,12 +73,7 @@ public class BufferList {
   }
 
   public void copy_range(long ofs, long n, SWIGTYPE_p_long dest_ids, SWIGTYPE_p_float dest_dis) {
-    swigfaissJNI.BufferList_copy_range(
-        swigCPtr,
-        this,
-        ofs,
-        n,
-        SWIGTYPE_p_long.getCPtr(dest_ids),
-        SWIGTYPE_p_float.getCPtr(dest_dis));
+    swigfaissJNI.BufferList_copy_range(swigCPtr, this, ofs, n, SWIGTYPE_p_long.getCPtr(dest_ids), SWIGTYPE_p_float.getCPtr(dest_dis));
   }
+
 }

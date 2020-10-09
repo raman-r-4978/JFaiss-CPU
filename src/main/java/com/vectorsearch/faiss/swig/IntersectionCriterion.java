@@ -48,7 +48,7 @@ public class IntersectionCriterion extends AutoTuneCriterion {
   }
 
   public double evaluate(SWIGTYPE_p_float D, SWIGTYPE_p_long I) {
-    return swigfaissJNI.IntersectionCriterion_evaluate(
-        swigCPtr, this, SWIGTYPE_p_float.getCPtr(D), SWIGTYPE_p_long.getCPtr(I));
+    return swigfaissJNI.IntersectionCriterion_evaluate(swigCPtr, this, SWIGTYPE_p_float.getCPtr(D), SWIGTYPE_p_long.getCPtr(I));
   }
+
 }

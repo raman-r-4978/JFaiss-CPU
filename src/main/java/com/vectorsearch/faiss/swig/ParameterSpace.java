@@ -36,8 +36,7 @@ public class ParameterSpace {
   }
 
   public void setParameter_ranges(SWIGTYPE_p_std__vectorT_faiss__ParameterRange_t value) {
-    swigfaissJNI.ParameterSpace_parameter_ranges_set(
-        swigCPtr, this, SWIGTYPE_p_std__vectorT_faiss__ParameterRange_t.getCPtr(value));
+    swigfaissJNI.ParameterSpace_parameter_ranges_set(swigCPtr, this, SWIGTYPE_p_std__vectorT_faiss__ParameterRange_t.getCPtr(value));
   }
 
   public SWIGTYPE_p_std__vectorT_faiss__ParameterRange_t getParameter_ranges() {
@@ -114,47 +113,23 @@ public class ParameterSpace {
   }
 
   public void set_index_parameters(Index index, long cno) {
-    swigfaissJNI.ParameterSpace_set_index_parameters__SWIG_0(
-        swigCPtr, this, Index.getCPtr(index), index, cno);
+    swigfaissJNI.ParameterSpace_set_index_parameters__SWIG_0(swigCPtr, this, Index.getCPtr(index), index, cno);
   }
 
   public void set_index_parameters(Index index, String param_string) {
-    swigfaissJNI.ParameterSpace_set_index_parameters__SWIG_1(
-        swigCPtr, this, Index.getCPtr(index), index, param_string);
+    swigfaissJNI.ParameterSpace_set_index_parameters__SWIG_1(swigCPtr, this, Index.getCPtr(index), index, param_string);
   }
 
   public void set_index_parameter(Index index, String name, double val) {
-    swigfaissJNI.ParameterSpace_set_index_parameter(
-        swigCPtr, this, Index.getCPtr(index), index, name, val);
+    swigfaissJNI.ParameterSpace_set_index_parameter(swigCPtr, this, Index.getCPtr(index), index, name, val);
   }
 
-  public void update_bounds(
-      long cno,
-      OperatingPoint op,
-      SWIGTYPE_p_double upper_bound_perf,
-      SWIGTYPE_p_double lower_bound_t) {
-    swigfaissJNI.ParameterSpace_update_bounds(
-        swigCPtr,
-        this,
-        cno,
-        OperatingPoint.getCPtr(op),
-        op,
-        SWIGTYPE_p_double.getCPtr(upper_bound_perf),
-        SWIGTYPE_p_double.getCPtr(lower_bound_t));
+  public void update_bounds(long cno, OperatingPoint op, SWIGTYPE_p_double upper_bound_perf, SWIGTYPE_p_double lower_bound_t) {
+    swigfaissJNI.ParameterSpace_update_bounds(swigCPtr, this, cno, OperatingPoint.getCPtr(op), op, SWIGTYPE_p_double.getCPtr(upper_bound_perf), SWIGTYPE_p_double.getCPtr(lower_bound_t));
   }
 
-  public void explore(
-      Index index, long nq, SWIGTYPE_p_float xq, AutoTuneCriterion crit, OperatingPoints ops) {
-    swigfaissJNI.ParameterSpace_explore(
-        swigCPtr,
-        this,
-        Index.getCPtr(index),
-        index,
-        nq,
-        SWIGTYPE_p_float.getCPtr(xq),
-        AutoTuneCriterion.getCPtr(crit),
-        crit,
-        OperatingPoints.getCPtr(ops),
-        ops);
+  public void explore(Index index, long nq, SWIGTYPE_p_float xq, AutoTuneCriterion crit, OperatingPoints ops) {
+    swigfaissJNI.ParameterSpace_explore(swigCPtr, this, Index.getCPtr(index), index, nq, SWIGTYPE_p_float.getCPtr(xq), AutoTuneCriterion.getCPtr(crit), crit, OperatingPoints.getCPtr(ops), ops);
   }
+
 }

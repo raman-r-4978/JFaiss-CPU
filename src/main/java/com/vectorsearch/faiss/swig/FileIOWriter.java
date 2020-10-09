@@ -63,4 +63,5 @@ public class FileIOWriter extends IOWriter {
   public int fileno() {
     return swigfaissJNI.FileIOWriter_fileno(swigCPtr, this);
   }
+
 }

@@ -70,8 +70,7 @@ public class ITQTransform extends VectorTransform {
   }
 
   public void setPca_then_itq(LinearTransform value) {
-    swigfaissJNI.ITQTransform_pca_then_itq_set(
-        swigCPtr, this, LinearTransform.getCPtr(value), value);
+    swigfaissJNI.ITQTransform_pca_then_itq_set(swigCPtr, this, LinearTransform.getCPtr(value), value);
   }
 
   public LinearTransform getPca_then_itq() {
@@ -100,7 +99,7 @@ public class ITQTransform extends VectorTransform {
   }
 
   public void apply_noalloc(int n, SWIGTYPE_p_float x, SWIGTYPE_p_float xt) {
-    swigfaissJNI.ITQTransform_apply_noalloc(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_float.getCPtr(xt));
+    swigfaissJNI.ITQTransform_apply_noalloc(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_float.getCPtr(xt));
   }
+
 }

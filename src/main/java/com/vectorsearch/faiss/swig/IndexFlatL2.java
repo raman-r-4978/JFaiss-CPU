@@ -42,4 +42,5 @@ public class IndexFlatL2 extends IndexFlat {
   public IndexFlatL2() {
     this(swigfaissJNI.new_IndexFlatL2__SWIG_1(), true);
   }
+
 }

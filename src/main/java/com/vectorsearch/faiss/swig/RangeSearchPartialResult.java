@@ -36,8 +36,7 @@ public class RangeSearchPartialResult extends BufferList {
   }
 
   public void setRes(RangeSearchResult value) {
-    swigfaissJNI.RangeSearchPartialResult_res_set(
-        swigCPtr, this, RangeSearchResult.getCPtr(value), value);
+    swigfaissJNI.RangeSearchPartialResult_res_set(swigCPtr, this, RangeSearchResult.getCPtr(value), value);
   }
 
   public RangeSearchResult getRes() {
@@ -46,13 +45,11 @@ public class RangeSearchPartialResult extends BufferList {
   }
 
   public RangeSearchPartialResult(RangeSearchResult res_in) {
-    this(
-        swigfaissJNI.new_RangeSearchPartialResult(RangeSearchResult.getCPtr(res_in), res_in), true);
+    this(swigfaissJNI.new_RangeSearchPartialResult(RangeSearchResult.getCPtr(res_in), res_in), true);
   }
 
   public void setQueries(SWIGTYPE_p_std__vectorT_faiss__RangeQueryResult_t value) {
-    swigfaissJNI.RangeSearchPartialResult_queries_set(
-        swigCPtr, this, SWIGTYPE_p_std__vectorT_faiss__RangeQueryResult_t.getCPtr(value));
+    swigfaissJNI.RangeSearchPartialResult_queries_set(swigCPtr, this, SWIGTYPE_p_std__vectorT_faiss__RangeQueryResult_t.getCPtr(value));
   }
 
   public SWIGTYPE_p_std__vectorT_faiss__RangeQueryResult_t getQueries() {
@@ -61,8 +58,7 @@ public class RangeSearchPartialResult extends BufferList {
   }
 
   public RangeQueryResult new_result(int qno) {
-    return new RangeQueryResult(
-        swigfaissJNI.RangeSearchPartialResult_new_result(swigCPtr, this, qno), false);
+    return new RangeQueryResult(swigfaissJNI.RangeSearchPartialResult_new_result(swigCPtr, this, qno), false);
   }
 
   public void faiss_RangeSearchPartialResult_finalize() {
@@ -81,17 +77,12 @@ public class RangeSearchPartialResult extends BufferList {
     swigfaissJNI.RangeSearchPartialResult_copy_result__SWIG_1(swigCPtr, this);
   }
 
-  public static void merge(
-      SWIGTYPE_p_std__vectorT_faiss__RangeSearchPartialResult_p_t partial_results,
-      boolean do_delete) {
-    swigfaissJNI.RangeSearchPartialResult_merge__SWIG_0(
-        SWIGTYPE_p_std__vectorT_faiss__RangeSearchPartialResult_p_t.getCPtr(partial_results),
-        do_delete);
+  public static void merge(SWIGTYPE_p_std__vectorT_faiss__RangeSearchPartialResult_p_t partial_results, boolean do_delete) {
+    swigfaissJNI.RangeSearchPartialResult_merge__SWIG_0(SWIGTYPE_p_std__vectorT_faiss__RangeSearchPartialResult_p_t.getCPtr(partial_results), do_delete);
   }
 
-  public static void merge(
-      SWIGTYPE_p_std__vectorT_faiss__RangeSearchPartialResult_p_t partial_results) {
-    swigfaissJNI.RangeSearchPartialResult_merge__SWIG_1(
-        SWIGTYPE_p_std__vectorT_faiss__RangeSearchPartialResult_p_t.getCPtr(partial_results));
+  public static void merge(SWIGTYPE_p_std__vectorT_faiss__RangeSearchPartialResult_p_t partial_results) {
+    swigfaissJNI.RangeSearchPartialResult_merge__SWIG_1(SWIGTYPE_p_std__vectorT_faiss__RangeSearchPartialResult_p_t.getCPtr(partial_results));
   }
+
 }

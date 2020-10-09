@@ -58,4 +58,5 @@ public class IDSelectorBatch extends IDSelector {
   public boolean is_member(int id) {
     return swigfaissJNI.IDSelectorBatch_is_member(swigCPtr, this, id);
   }
+
 }

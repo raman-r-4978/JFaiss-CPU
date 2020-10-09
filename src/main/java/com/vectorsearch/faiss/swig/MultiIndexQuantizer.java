@@ -52,16 +52,8 @@ public class MultiIndexQuantizer extends Index {
     swigfaissJNI.MultiIndexQuantizer_train(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.MultiIndexQuantizer_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.MultiIndexQuantizer_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void add(int n, SWIGTYPE_p_float x) {
@@ -77,7 +69,7 @@ public class MultiIndexQuantizer extends Index {
   }
 
   public void reconstruct(int key, SWIGTYPE_p_float recons) {
-    swigfaissJNI.MultiIndexQuantizer_reconstruct(
-        swigCPtr, this, key, SWIGTYPE_p_float.getCPtr(recons));
+    swigfaissJNI.MultiIndexQuantizer_reconstruct(swigCPtr, this, key, SWIGTYPE_p_float.getCPtr(recons));
   }
+
 }

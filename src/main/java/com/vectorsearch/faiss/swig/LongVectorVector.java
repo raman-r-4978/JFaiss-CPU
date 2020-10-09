@@ -67,4 +67,5 @@ public class LongVectorVector {
   public void swap(LongVectorVector other) {
     swigfaissJNI.LongVectorVector_swap(swigCPtr, this, LongVectorVector.getCPtr(other), other);
   }
+
 }

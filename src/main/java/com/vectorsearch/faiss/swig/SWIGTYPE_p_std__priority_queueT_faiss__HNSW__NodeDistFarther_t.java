@@ -11,8 +11,7 @@ package com.vectorsearch.faiss.swig;
 public class SWIGTYPE_p_std__priority_queueT_faiss__HNSW__NodeDistFarther_t {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_std__priority_queueT_faiss__HNSW__NodeDistFarther_t(
-      long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_std__priority_queueT_faiss__HNSW__NodeDistFarther_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
@@ -20,8 +19,8 @@ public class SWIGTYPE_p_std__priority_queueT_faiss__HNSW__NodeDistFarther_t {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(
-      SWIGTYPE_p_std__priority_queueT_faiss__HNSW__NodeDistFarther_t obj) {
+  protected static long getCPtr(SWIGTYPE_p_std__priority_queueT_faiss__HNSW__NodeDistFarther_t obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }
+

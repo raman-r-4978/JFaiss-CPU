@@ -115,7 +115,16 @@ public class ClusteringParameters {
     return swigfaissJNI.ClusteringParameters_seed_get(swigCPtr, this);
   }
 
+  public void setDecode_block_size(long value) {
+    swigfaissJNI.ClusteringParameters_decode_block_size_set(swigCPtr, this, value);
+  }
+
+  public long getDecode_block_size() {
+    return swigfaissJNI.ClusteringParameters_decode_block_size_get(swigCPtr, this);
+  }
+
   public ClusteringParameters() {
     this(swigfaissJNI.new_ClusteringParameters(), true);
   }
+
 }

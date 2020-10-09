@@ -90,4 +90,5 @@ public class IndexIVFStats {
   public void reset() {
     swigfaissJNI.IndexIVFStats_reset(swigCPtr, this);
   }
+
 }

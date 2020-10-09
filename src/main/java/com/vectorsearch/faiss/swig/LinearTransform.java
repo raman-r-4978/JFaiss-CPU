@@ -86,18 +86,15 @@ public class LinearTransform extends VectorTransform {
   }
 
   public void apply_noalloc(int n, SWIGTYPE_p_float x, SWIGTYPE_p_float xt) {
-    swigfaissJNI.LinearTransform_apply_noalloc(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_float.getCPtr(xt));
+    swigfaissJNI.LinearTransform_apply_noalloc(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_float.getCPtr(xt));
   }
 
   public void transform_transpose(int n, SWIGTYPE_p_float y, SWIGTYPE_p_float x) {
-    swigfaissJNI.LinearTransform_transform_transpose(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(y), SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.LinearTransform_transform_transpose(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(y), SWIGTYPE_p_float.getCPtr(x));
   }
 
   public void reverse_transform(int n, SWIGTYPE_p_float xt, SWIGTYPE_p_float x) {
-    swigfaissJNI.LinearTransform_reverse_transform(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(xt), SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.LinearTransform_reverse_transform(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(xt), SWIGTYPE_p_float.getCPtr(x));
   }
 
   public void set_is_orthonormal() {
@@ -113,7 +110,7 @@ public class LinearTransform extends VectorTransform {
   }
 
   public void print_if_verbose(String name, DoubleVector mat, int n, int d) {
-    swigfaissJNI.LinearTransform_print_if_verbose(
-        swigCPtr, this, name, DoubleVector.getCPtr(mat), mat, n, d);
+    swigfaissJNI.LinearTransform_print_if_verbose(swigCPtr, this, name, DoubleVector.getCPtr(mat), mat, n, d);
   }
+
 }

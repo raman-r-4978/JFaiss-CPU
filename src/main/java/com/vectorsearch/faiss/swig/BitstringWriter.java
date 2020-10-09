@@ -67,4 +67,5 @@ public class BitstringWriter {
   public void write(long x, int nbit) {
     swigfaissJNI.BitstringWriter_write(swigCPtr, this, x, nbit);
   }
+
 }

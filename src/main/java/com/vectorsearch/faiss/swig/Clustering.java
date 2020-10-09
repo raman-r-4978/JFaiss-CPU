@@ -60,13 +60,13 @@ public class Clustering extends ClusteringParameters {
     return (cPtr == 0) ? null : new FloatVector(cPtr, false);
   }
 
-  public void setObj(FloatVector value) {
-    swigfaissJNI.Clustering_obj_set(swigCPtr, this, FloatVector.getCPtr(value), value);
+  public void setIteration_stats(ClusteringIterationStatsVector value) {
+    swigfaissJNI.Clustering_iteration_stats_set(swigCPtr, this, ClusteringIterationStatsVector.getCPtr(value), value);
   }
 
-  public FloatVector getObj() {
-    long cPtr = swigfaissJNI.Clustering_obj_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new FloatVector(cPtr, false);
+  public ClusteringIterationStatsVector getIteration_stats() {
+    long cPtr = swigfaissJNI.Clustering_iteration_stats_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new ClusteringIterationStatsVector(cPtr, false);
   }
 
   public Clustering(int d, int k) {
@@ -77,12 +77,24 @@ public class Clustering extends ClusteringParameters {
     this(swigfaissJNI.new_Clustering__SWIG_1(d, k, ClusteringParameters.getCPtr(cp), cp), true);
   }
 
+  public void train(int n, SWIGTYPE_p_float x, Index index, SWIGTYPE_p_float x_weights) {
+    swigfaissJNI.Clustering_train__SWIG_0(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), Index.getCPtr(index), index, SWIGTYPE_p_float.getCPtr(x_weights));
+  }
+
   public void train(int n, SWIGTYPE_p_float x, Index index) {
-    swigfaissJNI.Clustering_train(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), Index.getCPtr(index), index);
+    swigfaissJNI.Clustering_train__SWIG_1(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), Index.getCPtr(index), index);
+  }
+
+  public void train_encoded(int nx, SWIGTYPE_p_unsigned_char x_in, Index codec, Index index, SWIGTYPE_p_float weights) {
+    swigfaissJNI.Clustering_train_encoded__SWIG_0(swigCPtr, this, nx, SWIGTYPE_p_unsigned_char.getCPtr(x_in), Index.getCPtr(codec), codec, Index.getCPtr(index), index, SWIGTYPE_p_float.getCPtr(weights));
+  }
+
+  public void train_encoded(int nx, SWIGTYPE_p_unsigned_char x_in, Index codec, Index index) {
+    swigfaissJNI.Clustering_train_encoded__SWIG_1(swigCPtr, this, nx, SWIGTYPE_p_unsigned_char.getCPtr(x_in), Index.getCPtr(codec), codec, Index.getCPtr(index), index);
   }
 
   public void post_process_centroids() {
     swigfaissJNI.Clustering_post_process_centroids(swigCPtr, this);
   }
+
 }

@@ -66,8 +66,7 @@ public class InvertedLists {
   }
 
   public void release_codes(long list_no, SWIGTYPE_p_unsigned_char codes) {
-    swigfaissJNI.InvertedLists_release_codes(
-        swigCPtr, this, list_no, SWIGTYPE_p_unsigned_char.getCPtr(codes));
+    swigfaissJNI.InvertedLists_release_codes(swigCPtr, this, list_no, SWIGTYPE_p_unsigned_char.getCPtr(codes));
   }
 
   public void release_ids(long list_no, SWIGTYPE_p_long ids) {
@@ -84,41 +83,23 @@ public class InvertedLists {
   }
 
   public void prefetch_lists(SWIGTYPE_p_long list_nos, int nlist) {
-    swigfaissJNI.InvertedLists_prefetch_lists(
-        swigCPtr, this, SWIGTYPE_p_long.getCPtr(list_nos), nlist);
+    swigfaissJNI.InvertedLists_prefetch_lists(swigCPtr, this, SWIGTYPE_p_long.getCPtr(list_nos), nlist);
   }
 
   public long add_entry(long list_no, int theid, SWIGTYPE_p_unsigned_char code) {
-    return swigfaissJNI.InvertedLists_add_entry(
-        swigCPtr, this, list_no, theid, SWIGTYPE_p_unsigned_char.getCPtr(code));
+    return swigfaissJNI.InvertedLists_add_entry(swigCPtr, this, list_no, theid, SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
-  public long add_entries(
-      long list_no, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
-    return swigfaissJNI.InvertedLists_add_entries(
-        swigCPtr,
-        this,
-        list_no,
-        n_entry,
-        SWIGTYPE_p_long.getCPtr(ids),
-        SWIGTYPE_p_unsigned_char.getCPtr(code));
+  public long add_entries(long list_no, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
+    return swigfaissJNI.InvertedLists_add_entries(swigCPtr, this, list_no, n_entry, SWIGTYPE_p_long.getCPtr(ids), SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
   public void update_entry(long list_no, long offset, int id, SWIGTYPE_p_unsigned_char code) {
-    swigfaissJNI.InvertedLists_update_entry(
-        swigCPtr, this, list_no, offset, id, SWIGTYPE_p_unsigned_char.getCPtr(code));
+    swigfaissJNI.InvertedLists_update_entry(swigCPtr, this, list_no, offset, id, SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
-  public void update_entries(
-      long list_no, long offset, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
-    swigfaissJNI.InvertedLists_update_entries(
-        swigCPtr,
-        this,
-        list_no,
-        offset,
-        n_entry,
-        SWIGTYPE_p_long.getCPtr(ids),
-        SWIGTYPE_p_unsigned_char.getCPtr(code));
+  public void update_entries(long list_no, long offset, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
+    swigfaissJNI.InvertedLists_update_entries(swigCPtr, this, list_no, offset, n_entry, SWIGTYPE_p_long.getCPtr(ids), SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
   public void resize(long list_no, long new_size) {
@@ -130,8 +111,7 @@ public class InvertedLists {
   }
 
   public void merge_from(InvertedLists oivf, long add_id) {
-    swigfaissJNI.InvertedLists_merge_from(
-        swigCPtr, this, InvertedLists.getCPtr(oivf), oivf, add_id);
+    swigfaissJNI.InvertedLists_merge_from(swigCPtr, this, InvertedLists.getCPtr(oivf), oivf, add_id);
   }
 
   public double imbalance_factor() {
@@ -146,23 +126,23 @@ public class InvertedLists {
     return swigfaissJNI.InvertedLists_compute_ntotal(swigCPtr, this);
   }
 
-  public static class ScopedIds {
+  static public class ScopedIds {
     private transient long swigCPtr;
     protected transient boolean swigCMemOwn;
-
+  
     protected ScopedIds(long cPtr, boolean cMemoryOwn) {
       swigCMemOwn = cMemoryOwn;
       swigCPtr = cPtr;
     }
-
+  
     protected static long getCPtr(ScopedIds obj) {
       return (obj == null) ? 0 : obj.swigCPtr;
     }
-
+  
     protected void finalize() {
       delete();
     }
-
+  
     public synchronized void delete() {
       if (swigCPtr != 0) {
         if (swigCMemOwn) {
@@ -172,61 +152,61 @@ public class InvertedLists {
         swigCPtr = 0;
       }
     }
-
+  
     public void setIl(InvertedLists value) {
-      swigfaissJNI.InvertedLists_ScopedIds_il_set(
-          swigCPtr, this, InvertedLists.getCPtr(value), value);
+      swigfaissJNI.InvertedLists_ScopedIds_il_set(swigCPtr, this, InvertedLists.getCPtr(value), value);
     }
-
+  
     public InvertedLists getIl() {
       long cPtr = swigfaissJNI.InvertedLists_ScopedIds_il_get(swigCPtr, this);
       return (cPtr == 0) ? null : new InvertedLists(cPtr, false);
     }
-
+  
     public void setIds(SWIGTYPE_p_long value) {
       swigfaissJNI.InvertedLists_ScopedIds_ids_set(swigCPtr, this, SWIGTYPE_p_long.getCPtr(value));
     }
-
+  
     public SWIGTYPE_p_long getIds() {
       long cPtr = swigfaissJNI.InvertedLists_ScopedIds_ids_get(swigCPtr, this);
       return (cPtr == 0) ? null : new SWIGTYPE_p_long(cPtr, false);
     }
-
+  
     public void setList_no(long value) {
       swigfaissJNI.InvertedLists_ScopedIds_list_no_set(swigCPtr, this, value);
     }
-
+  
     public long getList_no() {
       return swigfaissJNI.InvertedLists_ScopedIds_list_no_get(swigCPtr, this);
     }
-
+  
     public ScopedIds(InvertedLists il, long list_no) {
       this(swigfaissJNI.new_InvertedLists_ScopedIds(InvertedLists.getCPtr(il), il, list_no), true);
     }
-
+  
     public SWIGTYPE_p_long get() {
       long cPtr = swigfaissJNI.InvertedLists_ScopedIds_get(swigCPtr, this);
       return (cPtr == 0) ? null : new SWIGTYPE_p_long(cPtr, false);
     }
+  
   }
 
-  public static class ScopedCodes {
+  static public class ScopedCodes {
     private transient long swigCPtr;
     protected transient boolean swigCMemOwn;
-
+  
     protected ScopedCodes(long cPtr, boolean cMemoryOwn) {
       swigCMemOwn = cMemoryOwn;
       swigCPtr = cPtr;
     }
-
+  
     protected static long getCPtr(ScopedCodes obj) {
       return (obj == null) ? 0 : obj.swigCPtr;
     }
-
+  
     protected void finalize() {
       delete();
     }
-
+  
     public synchronized void delete() {
       if (swigCPtr != 0) {
         if (swigCMemOwn) {
@@ -236,52 +216,46 @@ public class InvertedLists {
         swigCPtr = 0;
       }
     }
-
+  
     public void setIl(InvertedLists value) {
-      swigfaissJNI.InvertedLists_ScopedCodes_il_set(
-          swigCPtr, this, InvertedLists.getCPtr(value), value);
+      swigfaissJNI.InvertedLists_ScopedCodes_il_set(swigCPtr, this, InvertedLists.getCPtr(value), value);
     }
-
+  
     public InvertedLists getIl() {
       long cPtr = swigfaissJNI.InvertedLists_ScopedCodes_il_get(swigCPtr, this);
       return (cPtr == 0) ? null : new InvertedLists(cPtr, false);
     }
-
+  
     public void setCodes(SWIGTYPE_p_unsigned_char value) {
-      swigfaissJNI.InvertedLists_ScopedCodes_codes_set(
-          swigCPtr, this, SWIGTYPE_p_unsigned_char.getCPtr(value));
+      swigfaissJNI.InvertedLists_ScopedCodes_codes_set(swigCPtr, this, SWIGTYPE_p_unsigned_char.getCPtr(value));
     }
-
+  
     public SWIGTYPE_p_unsigned_char getCodes() {
       long cPtr = swigfaissJNI.InvertedLists_ScopedCodes_codes_get(swigCPtr, this);
       return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
     }
-
+  
     public void setList_no(long value) {
       swigfaissJNI.InvertedLists_ScopedCodes_list_no_set(swigCPtr, this, value);
     }
-
+  
     public long getList_no() {
       return swigfaissJNI.InvertedLists_ScopedCodes_list_no_get(swigCPtr, this);
     }
-
+  
     public ScopedCodes(InvertedLists il, long list_no) {
-      this(
-          swigfaissJNI.new_InvertedLists_ScopedCodes__SWIG_0(
-              InvertedLists.getCPtr(il), il, list_no),
-          true);
+      this(swigfaissJNI.new_InvertedLists_ScopedCodes__SWIG_0(InvertedLists.getCPtr(il), il, list_no), true);
     }
-
+  
     public ScopedCodes(InvertedLists il, long list_no, long offset) {
-      this(
-          swigfaissJNI.new_InvertedLists_ScopedCodes__SWIG_1(
-              InvertedLists.getCPtr(il), il, list_no, offset),
-          true);
+      this(swigfaissJNI.new_InvertedLists_ScopedCodes__SWIG_1(InvertedLists.getCPtr(il), il, list_no, offset), true);
     }
-
+  
     public SWIGTYPE_p_unsigned_char get() {
       long cPtr = swigfaissJNI.InvertedLists_ScopedCodes_get(swigCPtr, this);
       return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_char(cPtr, false);
     }
+  
   }
+
 }

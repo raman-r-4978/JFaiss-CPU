@@ -92,41 +92,23 @@ public class Index {
   }
 
   public void add_with_ids(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long xids) {
-    swigfaissJNI.Index_add_with_ids(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
+    swigfaissJNI.Index_add_with_ids(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(xids));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.Index_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.Index_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void range_search(int n, SWIGTYPE_p_float x, float radius, RangeSearchResult result) {
-    swigfaissJNI.Index_range_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        radius,
-        RangeSearchResult.getCPtr(result),
-        result);
+    swigfaissJNI.Index_range_search(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), radius, RangeSearchResult.getCPtr(result), result);
   }
 
   public void assign(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long labels, int k) {
-    swigfaissJNI.Index_assign__SWIG_0(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(labels), k);
+    swigfaissJNI.Index_assign__SWIG_0(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(labels), k);
   }
 
   public void assign(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long labels) {
-    swigfaissJNI.Index_assign__SWIG_1(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(labels));
+    swigfaissJNI.Index_assign__SWIG_1(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void reset() {
@@ -145,38 +127,16 @@ public class Index {
     swigfaissJNI.Index_reconstruct_n(swigCPtr, this, i0, ni, SWIGTYPE_p_float.getCPtr(recons));
   }
 
-  public void search_and_reconstruct(
-      int n,
-      SWIGTYPE_p_float x,
-      int k,
-      SWIGTYPE_p_float distances,
-      SWIGTYPE_p_long labels,
-      SWIGTYPE_p_float recons) {
-    swigfaissJNI.Index_search_and_reconstruct(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        k,
-        SWIGTYPE_p_float.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels),
-        SWIGTYPE_p_float.getCPtr(recons));
+  public void search_and_reconstruct(int n, SWIGTYPE_p_float x, int k, SWIGTYPE_p_float distances, SWIGTYPE_p_long labels, SWIGTYPE_p_float recons) {
+    swigfaissJNI.Index_search_and_reconstruct(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), k, SWIGTYPE_p_float.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels), SWIGTYPE_p_float.getCPtr(recons));
   }
 
   public void compute_residual(SWIGTYPE_p_float x, SWIGTYPE_p_float residual, int key) {
-    swigfaissJNI.Index_compute_residual(
-        swigCPtr, this, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_float.getCPtr(residual), key);
+    swigfaissJNI.Index_compute_residual(swigCPtr, this, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_float.getCPtr(residual), key);
   }
 
-  public void compute_residual_n(
-      int n, SWIGTYPE_p_float xs, SWIGTYPE_p_float residuals, SWIGTYPE_p_long keys) {
-    swigfaissJNI.Index_compute_residual_n(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(xs),
-        SWIGTYPE_p_float.getCPtr(residuals),
-        SWIGTYPE_p_long.getCPtr(keys));
+  public void compute_residual_n(int n, SWIGTYPE_p_float xs, SWIGTYPE_p_float residuals, SWIGTYPE_p_long keys) {
+    swigfaissJNI.Index_compute_residual_n(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(xs), SWIGTYPE_p_float.getCPtr(residuals), SWIGTYPE_p_long.getCPtr(keys));
   }
 
   public DistanceComputer get_distance_computer() {
@@ -189,12 +149,11 @@ public class Index {
   }
 
   public void sa_encode(int n, SWIGTYPE_p_float x, SWIGTYPE_p_unsigned_char bytes) {
-    swigfaissJNI.Index_sa_encode(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
+    swigfaissJNI.Index_sa_encode(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_unsigned_char.getCPtr(bytes));
   }
 
   public void sa_decode(int n, SWIGTYPE_p_unsigned_char bytes, SWIGTYPE_p_float x) {
-    swigfaissJNI.Index_sa_decode(
-        swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.Index_sa_decode(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(bytes), SWIGTYPE_p_float.getCPtr(x));
   }
+
 }

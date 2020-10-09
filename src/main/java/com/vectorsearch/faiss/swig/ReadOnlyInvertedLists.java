@@ -35,30 +35,16 @@ public class ReadOnlyInvertedLists extends InvertedLists {
     super.delete();
   }
 
-  public long add_entries(
-      long list_no, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
-    return swigfaissJNI.ReadOnlyInvertedLists_add_entries(
-        swigCPtr,
-        this,
-        list_no,
-        n_entry,
-        SWIGTYPE_p_long.getCPtr(ids),
-        SWIGTYPE_p_unsigned_char.getCPtr(code));
+  public long add_entries(long list_no, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
+    return swigfaissJNI.ReadOnlyInvertedLists_add_entries(swigCPtr, this, list_no, n_entry, SWIGTYPE_p_long.getCPtr(ids), SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
-  public void update_entries(
-      long list_no, long offset, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
-    swigfaissJNI.ReadOnlyInvertedLists_update_entries(
-        swigCPtr,
-        this,
-        list_no,
-        offset,
-        n_entry,
-        SWIGTYPE_p_long.getCPtr(ids),
-        SWIGTYPE_p_unsigned_char.getCPtr(code));
+  public void update_entries(long list_no, long offset, long n_entry, SWIGTYPE_p_long ids, SWIGTYPE_p_unsigned_char code) {
+    swigfaissJNI.ReadOnlyInvertedLists_update_entries(swigCPtr, this, list_no, offset, n_entry, SWIGTYPE_p_long.getCPtr(ids), SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
   public void resize(long list_no, long new_size) {
     swigfaissJNI.ReadOnlyInvertedLists_resize(swigCPtr, this, list_no, new_size);
   }
+
 }

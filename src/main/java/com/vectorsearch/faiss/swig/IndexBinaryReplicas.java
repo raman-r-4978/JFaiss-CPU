@@ -56,8 +56,7 @@ public class IndexBinaryReplicas extends ThreadedIndexBaseBinary {
   }
 
   public void remove_replica(IndexBinary index) {
-    swigfaissJNI.IndexBinaryReplicas_remove_replica(
-        swigCPtr, this, IndexBinary.getCPtr(index), index);
+    swigfaissJNI.IndexBinaryReplicas_remove_replica(swigCPtr, this, IndexBinary.getCPtr(index), index);
   }
 
   public void train(int n, SWIGTYPE_p_unsigned_char x) {
@@ -68,20 +67,12 @@ public class IndexBinaryReplicas extends ThreadedIndexBaseBinary {
     swigfaissJNI.IndexBinaryReplicas_add(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x));
   }
 
-  public void search(
-      int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
-    swigfaissJNI.IndexBinaryReplicas_search(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_unsigned_char.getCPtr(x),
-        k,
-        SWIGTYPE_p_int.getCPtr(distances),
-        SWIGTYPE_p_long.getCPtr(labels));
+  public void search(int n, SWIGTYPE_p_unsigned_char x, int k, SWIGTYPE_p_int distances, SWIGTYPE_p_long labels) {
+    swigfaissJNI.IndexBinaryReplicas_search(swigCPtr, this, n, SWIGTYPE_p_unsigned_char.getCPtr(x), k, SWIGTYPE_p_int.getCPtr(distances), SWIGTYPE_p_long.getCPtr(labels));
   }
 
   public void reconstruct(int arg0, SWIGTYPE_p_unsigned_char v) {
-    swigfaissJNI.IndexBinaryReplicas_reconstruct(
-        swigCPtr, this, arg0, SWIGTYPE_p_unsigned_char.getCPtr(v));
+    swigfaissJNI.IndexBinaryReplicas_reconstruct(swigCPtr, this, arg0, SWIGTYPE_p_unsigned_char.getCPtr(v));
   }
+
 }

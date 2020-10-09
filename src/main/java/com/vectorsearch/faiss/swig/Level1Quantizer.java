@@ -87,8 +87,7 @@ public class Level1Quantizer {
   }
 
   public void train_q1(long n, SWIGTYPE_p_float x, boolean verbose, MetricType metric_type) {
-    swigfaissJNI.Level1Quantizer_train_q1(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), verbose, metric_type.swigValue());
+    swigfaissJNI.Level1Quantizer_train_q1(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), verbose, metric_type.swigValue());
   }
 
   public long coarse_code_size() {
@@ -96,21 +95,19 @@ public class Level1Quantizer {
   }
 
   public void encode_listno(int list_no, SWIGTYPE_p_unsigned_char code) {
-    swigfaissJNI.Level1Quantizer_encode_listno(
-        swigCPtr, this, list_no, SWIGTYPE_p_unsigned_char.getCPtr(code));
+    swigfaissJNI.Level1Quantizer_encode_listno(swigCPtr, this, list_no, SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
   public int decode_listno(SWIGTYPE_p_unsigned_char code) {
-    return swigfaissJNI.Level1Quantizer_decode_listno(
-        swigCPtr, this, SWIGTYPE_p_unsigned_char.getCPtr(code));
+    return swigfaissJNI.Level1Quantizer_decode_listno(swigCPtr, this, SWIGTYPE_p_unsigned_char.getCPtr(code));
   }
 
   public Level1Quantizer(Index quantizer, long nlist) {
-    this(
-        swigfaissJNI.new_Level1Quantizer__SWIG_0(Index.getCPtr(quantizer), quantizer, nlist), true);
+    this(swigfaissJNI.new_Level1Quantizer__SWIG_0(Index.getCPtr(quantizer), quantizer, nlist), true);
   }
 
   public Level1Quantizer() {
     this(swigfaissJNI.new_Level1Quantizer__SWIG_1(), true);
   }
+
 }

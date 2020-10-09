@@ -68,18 +68,16 @@ public class IndexIVFSpectralHash extends IndexIVF {
     return swigfaissJNI.IndexIVFSpectralHash_period_get(swigCPtr, this);
   }
 
-  public void setThreshold_type(ThresholdType value) {
+  public void setThreshold_type(IndexIVFSpectralHash.ThresholdType value) {
     swigfaissJNI.IndexIVFSpectralHash_threshold_type_set(swigCPtr, this, value.swigValue());
   }
 
-  public ThresholdType getThreshold_type() {
-    return ThresholdType.swigToEnum(
-        swigfaissJNI.IndexIVFSpectralHash_threshold_type_get(swigCPtr, this));
+  public IndexIVFSpectralHash.ThresholdType getThreshold_type() {
+    return IndexIVFSpectralHash.ThresholdType.swigToEnum(swigfaissJNI.IndexIVFSpectralHash_threshold_type_get(swigCPtr, this));
   }
 
   public void setTrained(FloatVector value) {
-    swigfaissJNI.IndexIVFSpectralHash_trained_set(
-        swigCPtr, this, FloatVector.getCPtr(value), value);
+    swigfaissJNI.IndexIVFSpectralHash_trained_set(swigCPtr, this, FloatVector.getCPtr(value), value);
   }
 
   public FloatVector getTrained() {
@@ -88,10 +86,7 @@ public class IndexIVFSpectralHash extends IndexIVF {
   }
 
   public IndexIVFSpectralHash(Index quantizer, long d, long nlist, int nbit, float period) {
-    this(
-        swigfaissJNI.new_IndexIVFSpectralHash__SWIG_0(
-            Index.getCPtr(quantizer), quantizer, d, nlist, nbit, period),
-        true);
+    this(swigfaissJNI.new_IndexIVFSpectralHash__SWIG_0(Index.getCPtr(quantizer), quantizer, d, nlist, nbit, period), true);
   }
 
   public IndexIVFSpectralHash() {
@@ -99,52 +94,27 @@ public class IndexIVFSpectralHash extends IndexIVF {
   }
 
   public void train_residual(int n, SWIGTYPE_p_float x) {
-    swigfaissJNI.IndexIVFSpectralHash_train_residual(
-        swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
+    swigfaissJNI.IndexIVFSpectralHash_train_residual(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x));
   }
 
-  public void encode_vectors(
-      int n,
-      SWIGTYPE_p_float x,
-      SWIGTYPE_p_long list_nos,
-      SWIGTYPE_p_unsigned_char codes,
-      boolean include_listnos) {
-    swigfaissJNI.IndexIVFSpectralHash_encode_vectors__SWIG_0(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        SWIGTYPE_p_long.getCPtr(list_nos),
-        SWIGTYPE_p_unsigned_char.getCPtr(codes),
-        include_listnos);
+  public void encode_vectors(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long list_nos, SWIGTYPE_p_unsigned_char codes, boolean include_listnos) {
+    swigfaissJNI.IndexIVFSpectralHash_encode_vectors__SWIG_0(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(list_nos), SWIGTYPE_p_unsigned_char.getCPtr(codes), include_listnos);
   }
 
-  public void encode_vectors(
-      int n, SWIGTYPE_p_float x, SWIGTYPE_p_long list_nos, SWIGTYPE_p_unsigned_char codes) {
-    swigfaissJNI.IndexIVFSpectralHash_encode_vectors__SWIG_1(
-        swigCPtr,
-        this,
-        n,
-        SWIGTYPE_p_float.getCPtr(x),
-        SWIGTYPE_p_long.getCPtr(list_nos),
-        SWIGTYPE_p_unsigned_char.getCPtr(codes));
+  public void encode_vectors(int n, SWIGTYPE_p_float x, SWIGTYPE_p_long list_nos, SWIGTYPE_p_unsigned_char codes) {
+    swigfaissJNI.IndexIVFSpectralHash_encode_vectors__SWIG_1(swigCPtr, this, n, SWIGTYPE_p_float.getCPtr(x), SWIGTYPE_p_long.getCPtr(list_nos), SWIGTYPE_p_unsigned_char.getCPtr(codes));
   }
 
   public SWIGTYPE_p_faiss__InvertedListScanner get_InvertedListScanner(boolean store_pairs) {
-    long cPtr =
-        swigfaissJNI.IndexIVFSpectralHash_get_InvertedListScanner(swigCPtr, this, store_pairs);
+    long cPtr = swigfaissJNI.IndexIVFSpectralHash_get_InvertedListScanner(swigCPtr, this, store_pairs);
     return (cPtr == 0) ? null : new SWIGTYPE_p_faiss__InvertedListScanner(cPtr, false);
   }
 
-  public static final class ThresholdType {
-    public static final ThresholdType Thresh_global =
-        new ThresholdType("Thresh_global");
-    public static final ThresholdType Thresh_centroid =
-        new ThresholdType("Thresh_centroid");
-    public static final ThresholdType Thresh_centroid_half =
-        new ThresholdType("Thresh_centroid_half");
-    public static final ThresholdType Thresh_median =
-        new ThresholdType("Thresh_median");
+  public final static class ThresholdType {
+    public final static IndexIVFSpectralHash.ThresholdType Thresh_global = new IndexIVFSpectralHash.ThresholdType("Thresh_global");
+    public final static IndexIVFSpectralHash.ThresholdType Thresh_centroid = new IndexIVFSpectralHash.ThresholdType("Thresh_centroid");
+    public final static IndexIVFSpectralHash.ThresholdType Thresh_centroid_half = new IndexIVFSpectralHash.ThresholdType("Thresh_centroid_half");
+    public final static IndexIVFSpectralHash.ThresholdType Thresh_median = new IndexIVFSpectralHash.ThresholdType("Thresh_median");
 
     public final int swigValue() {
       return swigValue;
@@ -155,13 +125,12 @@ public class IndexIVFSpectralHash extends IndexIVF {
     }
 
     public static ThresholdType swigToEnum(int swigValue) {
-      if (swigValue < swigValues.length
-          && swigValue >= 0
-          && swigValues[swigValue].swigValue == swigValue) return swigValues[swigValue];
+      if (swigValue < swigValues.length && swigValue >= 0 && swigValues[swigValue].swigValue == swigValue)
+        return swigValues[swigValue];
       for (int i = 0; i < swigValues.length; i++)
-        if (swigValues[i].swigValue == swigValue) return swigValues[i];
-      throw new IllegalArgumentException(
-          "No enum " + ThresholdType.class + " with value " + swigValue);
+        if (swigValues[i].swigValue == swigValue)
+          return swigValues[i];
+      throw new IllegalArgumentException("No enum " + ThresholdType.class + " with value " + swigValue);
     }
 
     private ThresholdType(String swigName) {
@@ -172,20 +141,19 @@ public class IndexIVFSpectralHash extends IndexIVF {
     private ThresholdType(String swigName, int swigValue) {
       this.swigName = swigName;
       this.swigValue = swigValue;
-      swigNext = swigValue + 1;
+      swigNext = swigValue+1;
     }
 
     private ThresholdType(String swigName, ThresholdType swigEnum) {
       this.swigName = swigName;
       this.swigValue = swigEnum.swigValue;
-      swigNext = this.swigValue + 1;
+      swigNext = this.swigValue+1;
     }
 
-    private static ThresholdType[] swigValues = {
-      Thresh_global, Thresh_centroid, Thresh_centroid_half, Thresh_median
-    };
+    private static ThresholdType[] swigValues = { Thresh_global, Thresh_centroid, Thresh_centroid_half, Thresh_median };
     private static int swigNext = 0;
     private final int swigValue;
     private final String swigName;
   }
+
 }

@@ -36,8 +36,7 @@ public class SimulatedAnnealingOptimizer extends SimulatedAnnealingParameters {
   }
 
   public void setObj(PermutationObjective value) {
-    swigfaissJNI.SimulatedAnnealingOptimizer_obj_set(
-        swigCPtr, this, PermutationObjective.getCPtr(value), value);
+    swigfaissJNI.SimulatedAnnealingOptimizer_obj_set(swigCPtr, this, PermutationObjective.getCPtr(value), value);
   }
 
   public PermutationObjective getObj() {
@@ -54,8 +53,7 @@ public class SimulatedAnnealingOptimizer extends SimulatedAnnealingParameters {
   }
 
   public void setLogfile(SWIGTYPE_p_FILE value) {
-    swigfaissJNI.SimulatedAnnealingOptimizer_logfile_set(
-        swigCPtr, this, SWIGTYPE_p_FILE.getCPtr(value));
+    swigfaissJNI.SimulatedAnnealingOptimizer_logfile_set(swigCPtr, this, SWIGTYPE_p_FILE.getCPtr(value));
   }
 
   public SWIGTYPE_p_FILE getLogfile() {
@@ -64,15 +62,11 @@ public class SimulatedAnnealingOptimizer extends SimulatedAnnealingParameters {
   }
 
   public SimulatedAnnealingOptimizer(PermutationObjective obj, SimulatedAnnealingParameters p) {
-    this(
-        swigfaissJNI.new_SimulatedAnnealingOptimizer(
-            PermutationObjective.getCPtr(obj), obj, SimulatedAnnealingParameters.getCPtr(p), p),
-        true);
+    this(swigfaissJNI.new_SimulatedAnnealingOptimizer(PermutationObjective.getCPtr(obj), obj, SimulatedAnnealingParameters.getCPtr(p), p), true);
   }
 
   public void setRnd(RandomGenerator value) {
-    swigfaissJNI.SimulatedAnnealingOptimizer_rnd_set(
-        swigCPtr, this, RandomGenerator.getCPtr(value), value);
+    swigfaissJNI.SimulatedAnnealingOptimizer_rnd_set(swigCPtr, this, RandomGenerator.getCPtr(value), value);
   }
 
   public RandomGenerator getRnd() {
@@ -89,12 +83,11 @@ public class SimulatedAnnealingOptimizer extends SimulatedAnnealingParameters {
   }
 
   public double optimize(SWIGTYPE_p_int perm) {
-    return swigfaissJNI.SimulatedAnnealingOptimizer_optimize(
-        swigCPtr, this, SWIGTYPE_p_int.getCPtr(perm));
+    return swigfaissJNI.SimulatedAnnealingOptimizer_optimize(swigCPtr, this, SWIGTYPE_p_int.getCPtr(perm));
   }
 
   public double run_optimization(SWIGTYPE_p_int best_perm) {
-    return swigfaissJNI.SimulatedAnnealingOptimizer_run_optimization(
-        swigCPtr, this, SWIGTYPE_p_int.getCPtr(best_perm));
+    return swigfaissJNI.SimulatedAnnealingOptimizer_run_optimization(swigCPtr, this, SWIGTYPE_p_int.getCPtr(best_perm));
   }
+
 }

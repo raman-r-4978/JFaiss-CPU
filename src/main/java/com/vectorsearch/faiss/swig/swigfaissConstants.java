@@ -9,7 +9,7 @@
 package com.vectorsearch.faiss.swig;
 
 public interface swigfaissConstants {
-  public static final int FAISS_VERSION_MAJOR = swigfaissJNI.FAISS_VERSION_MAJOR_get();
-  public static final int FAISS_VERSION_MINOR = swigfaissJNI.FAISS_VERSION_MINOR_get();
-  public static final int FAISS_VERSION_PATCH = swigfaissJNI.FAISS_VERSION_PATCH_get();
+  public final static int FAISS_VERSION_MAJOR = swigfaissJNI.FAISS_VERSION_MAJOR_get();
+  public final static int FAISS_VERSION_MINOR = swigfaissJNI.FAISS_VERSION_MINOR_get();
+  public final static int FAISS_VERSION_PATCH = swigfaissJNI.FAISS_VERSION_PATCH_get();
 }

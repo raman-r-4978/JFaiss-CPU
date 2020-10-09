@@ -36,25 +36,19 @@ public class ThreadedIndexBaseBinary extends IndexBinary {
   }
 
   public void addIndex(IndexBinary index) {
-    swigfaissJNI.ThreadedIndexBaseBinary_addIndex(
-        swigCPtr, this, IndexBinary.getCPtr(index), index);
+    swigfaissJNI.ThreadedIndexBaseBinary_addIndex(swigCPtr, this, IndexBinary.getCPtr(index), index);
   }
 
   public void removeIndex(IndexBinary index) {
-    swigfaissJNI.ThreadedIndexBaseBinary_removeIndex(
-        swigCPtr, this, IndexBinary.getCPtr(index), index);
+    swigfaissJNI.ThreadedIndexBaseBinary_removeIndex(swigCPtr, this, IndexBinary.getCPtr(index), index);
   }
 
   public void runOnIndex(SWIGTYPE_p_std__functionT_void_fint_faiss__IndexBinary_pF_t f) {
-    swigfaissJNI.ThreadedIndexBaseBinary_runOnIndex__SWIG_0(
-        swigCPtr, this, SWIGTYPE_p_std__functionT_void_fint_faiss__IndexBinary_pF_t.getCPtr(f));
+    swigfaissJNI.ThreadedIndexBaseBinary_runOnIndex__SWIG_0(swigCPtr, this, SWIGTYPE_p_std__functionT_void_fint_faiss__IndexBinary_pF_t.getCPtr(f));
   }
 
   public void runOnIndex(SWIGTYPE_p_std__functionT_void_fint_faiss__IndexBinary_const_pF_t f) {
-    swigfaissJNI.ThreadedIndexBaseBinary_runOnIndex__SWIG_1(
-        swigCPtr,
-        this,
-        SWIGTYPE_p_std__functionT_void_fint_faiss__IndexBinary_const_pF_t.getCPtr(f));
+    swigfaissJNI.ThreadedIndexBaseBinary_runOnIndex__SWIG_1(swigCPtr, this, SWIGTYPE_p_std__functionT_void_fint_faiss__IndexBinary_const_pF_t.getCPtr(f));
   }
 
   public void reset() {
@@ -77,4 +71,5 @@ public class ThreadedIndexBaseBinary extends IndexBinary {
   public boolean getOwn_fields() {
     return swigfaissJNI.ThreadedIndexBaseBinary_own_fields_get(swigCPtr, this);
   }
+
 }

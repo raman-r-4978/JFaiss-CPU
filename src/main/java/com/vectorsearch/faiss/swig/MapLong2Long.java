@@ -36,18 +36,15 @@ public class MapLong2Long {
   }
 
   public void setMap(SWIGTYPE_p_std__unordered_mapT_long_long_t value) {
-    swigfaissJNI.MapLong2Long_map_set(
-        swigCPtr, this, SWIGTYPE_p_std__unordered_mapT_long_long_t.getCPtr(value));
+    swigfaissJNI.MapLong2Long_map_set(swigCPtr, this, SWIGTYPE_p_std__unordered_mapT_long_long_t.getCPtr(value));
   }
 
   public SWIGTYPE_p_std__unordered_mapT_long_long_t getMap() {
-    return new SWIGTYPE_p_std__unordered_mapT_long_long_t(
-        swigfaissJNI.MapLong2Long_map_get(swigCPtr, this), true);
+    return new SWIGTYPE_p_std__unordered_mapT_long_long_t(swigfaissJNI.MapLong2Long_map_get(swigCPtr, this), true);
   }
 
   public void add(long n, SWIGTYPE_p_long keys, SWIGTYPE_p_long vals) {
-    swigfaissJNI.MapLong2Long_add(
-        swigCPtr, this, n, SWIGTYPE_p_long.getCPtr(keys), SWIGTYPE_p_long.getCPtr(vals));
+    swigfaissJNI.MapLong2Long_add(swigCPtr, this, n, SWIGTYPE_p_long.getCPtr(keys), SWIGTYPE_p_long.getCPtr(vals));
   }
 
   public int search(int key) {
@@ -55,11 +52,11 @@ public class MapLong2Long {
   }
 
   public void search_multiple(long n, SWIGTYPE_p_long keys, SWIGTYPE_p_long vals) {
-    swigfaissJNI.MapLong2Long_search_multiple(
-        swigCPtr, this, n, SWIGTYPE_p_long.getCPtr(keys), SWIGTYPE_p_long.getCPtr(vals));
+    swigfaissJNI.MapLong2Long_search_multiple(swigCPtr, this, n, SWIGTYPE_p_long.getCPtr(keys), SWIGTYPE_p_long.getCPtr(vals));
   }
 
   public MapLong2Long() {
     this(swigfaissJNI.new_MapLong2Long(), true);
   }
+
 }

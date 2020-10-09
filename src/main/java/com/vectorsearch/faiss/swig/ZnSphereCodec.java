@@ -35,22 +35,22 @@ public class ZnSphereCodec extends ZnSphereSearch {
     super.delete();
   }
 
-  public static class CodeSegment extends Repeats {
+  static public class CodeSegment extends Repeats {
     private transient long swigCPtr;
-
+  
     protected CodeSegment(long cPtr, boolean cMemoryOwn) {
       super(swigfaissJNI.ZnSphereCodec_CodeSegment_SWIGUpcast(cPtr), cMemoryOwn);
       swigCPtr = cPtr;
     }
-
+  
     protected static long getCPtr(CodeSegment obj) {
       return (obj == null) ? 0 : obj.swigCPtr;
     }
-
+  
     protected void finalize() {
       delete();
     }
-
+  
     public synchronized void delete() {
       if (swigCPtr != 0) {
         if (swigCMemOwn) {
@@ -61,38 +61,36 @@ public class ZnSphereCodec extends ZnSphereSearch {
       }
       super.delete();
     }
-
+  
     public CodeSegment(Repeats r) {
       this(swigfaissJNI.new_ZnSphereCodec_CodeSegment(Repeats.getCPtr(r), r), true);
     }
-
+  
     public void setC0(long value) {
       swigfaissJNI.ZnSphereCodec_CodeSegment_c0_set(swigCPtr, this, value);
     }
-
+  
     public long getC0() {
       return swigfaissJNI.ZnSphereCodec_CodeSegment_c0_get(swigCPtr, this);
     }
-
+  
     public void setSignbits(int value) {
       swigfaissJNI.ZnSphereCodec_CodeSegment_signbits_set(swigCPtr, this, value);
     }
-
+  
     public int getSignbits() {
       return swigfaissJNI.ZnSphereCodec_CodeSegment_signbits_get(swigCPtr, this);
     }
+  
   }
 
   public void setCode_segments(SWIGTYPE_p_std__vectorT_faiss__ZnSphereCodec__CodeSegment_t value) {
-    swigfaissJNI.ZnSphereCodec_code_segments_set(
-        swigCPtr, this, SWIGTYPE_p_std__vectorT_faiss__ZnSphereCodec__CodeSegment_t.getCPtr(value));
+    swigfaissJNI.ZnSphereCodec_code_segments_set(swigCPtr, this, SWIGTYPE_p_std__vectorT_faiss__ZnSphereCodec__CodeSegment_t.getCPtr(value));
   }
 
   public SWIGTYPE_p_std__vectorT_faiss__ZnSphereCodec__CodeSegment_t getCode_segments() {
     long cPtr = swigfaissJNI.ZnSphereCodec_code_segments_get(swigCPtr, this);
-    return (cPtr == 0)
-        ? null
-        : new SWIGTYPE_p_std__vectorT_faiss__ZnSphereCodec__CodeSegment_t(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_std__vectorT_faiss__ZnSphereCodec__CodeSegment_t(cPtr, false);
   }
 
   public void setNv(long value) {
@@ -116,8 +114,7 @@ public class ZnSphereCodec extends ZnSphereSearch {
   }
 
   public long search_and_encode(SWIGTYPE_p_float x) {
-    return swigfaissJNI.ZnSphereCodec_search_and_encode(
-        swigCPtr, this, SWIGTYPE_p_float.getCPtr(x));
+    return swigfaissJNI.ZnSphereCodec_search_and_encode(swigCPtr, this, SWIGTYPE_p_float.getCPtr(x));
   }
 
   public void decode(long code, SWIGTYPE_p_float c) {
@@ -127,4 +124,5 @@ public class ZnSphereCodec extends ZnSphereSearch {
   public long encode(SWIGTYPE_p_float x) {
     return swigfaissJNI.ZnSphereCodec_encode(swigCPtr, this, SWIGTYPE_p_float.getCPtr(x));
   }
+
 }
